@@ -1,0 +1,14 @@
+type: workspace
+model: workspace
+id: wk_86549zFCyz
+createdAt: 2025-11-04T10:59:34.094998
+updatedAt: 2025-11-04T10:59:36.095489
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: CBTC-UserFlow
+encryptionKeyChallenge: eUE0azNuQwFddmwptehk+8sfusU+4mBfpy9p8mJmAfyj0AHKrZPBHbGMjodlPwRrZ/nKdW2NVGZmr+bgjNA4MkQrRDzvGv+p9MLZX20h+BNdeqhizxJXkiljYZQAkrFfthE=
+settingValidateCertificates: true
+settingFollowRedirects: true
+settingRequestTimeout: 0
