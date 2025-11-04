@@ -2,16 +2,18 @@ type: http_request
 model: http_request
 id: rq_NZfpjizL6F
 createdAt: 2025-11-04T11:02:05.230783
-updatedAt: 2025-11-04T11:39:04.164604
+updatedAt: 2025-11-04T14:44:33.615614
 workspaceId: wk_86549zFCyz
 folderId: null
 authentication:
   accessTokenUrl: ${[ oauth_url ]}
   clientId: ${[ validator_client_id ]}
   clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RWRCZEV3MXA4Qzc1QTc5aDAybkZMNm5YenJSNVlLdlZCWklMenlSdlgrMDNONmtROUpxMzhsQVlIb1phSmdBejVma0Y5MUZjZy9hc2FSRndYOEF0UDZQSDV2UlRBVg') ]}
+  credentials: body
+  disabled: false
   grantType: password
-  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RXNBS1J1NXErMjRQeHdYZmdiZmVhSHpKZXBuaW0vTDc1Y3VRWmhldzVqUy9KRWdtOTk0QjJvTVM1Q2ZXK0Fac2JQNDlKQW0vb3laSlRUaVE9PQ') ]}
-  username: merchant_user
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R0dFdEMxZko5S2pVams4bVZtRmRhUVNQcEk3b3ZieXE4M3E0NzRjNkFJLzdmdGc3M3FvMkdkd1UyTDZ2TGRrTno0a0pmTFU3WFBZcDVlbXlLWA') ]}
+  username: ${[ oauth_username ]}
 authenticationType: oauth2
 body: {}
 bodyType: null

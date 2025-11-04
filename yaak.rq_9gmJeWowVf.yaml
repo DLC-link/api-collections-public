@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_9gmJeWowVf
+createdAt: 2025-11-04T14:36:51.364293
+updatedAt: 2025-11-04T14:46:57.017543
+workspaceId: wk_86549zFCyz
+folderId: null
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "chain": "${[ canton_network ]}"
+    }
+bodyType: application/json
+description: This endpoint is exposed by the Attestors, to disclose necessary Rules (factory) contracts for applications.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: 2SYcNMqdy2
+method: POST
+name: Get Account Rules Contracts
+sortPriority: -1762254125229.0
+url: ${[ coordinator_url ]}/app/get-account-contract-rules
+urlParameters: []
