@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_eW3P9YGa8t
+createdAt: 2025-11-05T11:47:29.226325
+updatedAt: 2025-11-05T11:48:05.043677
+workspaceId: wk_86549zFCyz
+folderId: null
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+        "chain": "${[ canton_network ]}"
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Get Token Standard Contracts
+sortPriority: -1566448116819.3333
+url: ${[ coordinator_url ]}/app/get-token-standard-contracts
+urlParameters: []

@@ -1,0 +1,41 @@
+type: http_request
+model: http_request
+id: rq_MQWKSXStu7
+createdAt: 2025-11-05T11:38:40.098902
+updatedAt: 2025-11-05T11:46:01.619409
+workspaceId: wk_86549zFCyz
+folderId: fl_eHkDuyTdMn
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "jsonrpc": "1.0",
+      "id": "jstest",
+      "method": "sendtoaddress",
+      "params": [
+        "bcrt1pm7mze0cgdeam0r92f4pd3shhuhj5ydvgra5dy5f7a5554usfwu7s9udnsd",
+        10,
+        "Sending btc"
+      ]
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Authorization
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RXc5Qm11emxOQ0RiNFIyUWhJR29xVE5HQzlYSUVaV0c3aWlOdXBFSEk5aUtHNUtqUzhTNFB3ZkVXdE1wK1h2MDcvVkxTSkVkZG0vOU5jZVdjVHZFaDg0QUk9') ]}
+  id: dCyTTYcwDa
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: B7gY4SQyVq
+- enabled: true
+  name: ''
+  value: ''
+  id: nuCjHedrnh
+method: POST
+name: Send Bitcoin
+sortPriority: 3000.0
+url: ${[ bitcoin_rpc_url ]}
+urlParameters: []

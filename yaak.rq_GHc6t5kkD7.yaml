@@ -1,0 +1,53 @@
+type: http_request
+model: http_request
+id: rq_GHc6t5kkD7
+createdAt: 2025-11-05T11:40:23.515198
+updatedAt: 2025-11-05T11:42:06.898206
+workspaceId: wk_86549zFCyz
+folderId: fl_eHkDuyTdMn
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SEl6a1pITXVJaUJkSi9HM0pPVDFWdTR3TVV5SFdEMmEzN0kyNDFuMXRnSzNSM2cxdUd0WWYyd2IwbUhmU0oxa1VjSEQ3d1JoZnBuSGNjcXJUcStYNlBHNEdFaXZCcg') ]}
+  disabled: false
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RWpNOFpzek5LNm12NnBPOFhtU21KMS9VSUUrcXBiLzA3M0IzM2Q2ajE1YWxiMGRxR1AzUmFiTEF5U3FyNmlUUE1HVjVpOHRlcFA0NE0vWGRIcQ') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+      "verbose": true,
+      "activeAtOffset": ${[ response.body.path(request='rq_NZfpjizL6F', path=b64'JC5vZmZzZXQ', behavior='always') ]},
+      "filter": {
+        "filtersByParty": {
+          "${[ user_party ]}": {
+            "cumulative": [
+              {
+                "identifierFilter": {
+                  "InterfaceFilter": {
+                    "value": {
+                      "interfaceId": "#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding",
+                      "includeInterfaceView": true,
+                      "includeCreatedEventBlob": true
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Get All Holdings
+sortPriority: 4000.0
+url: ${[ participant_url ]}/v2/state/active-contracts
+urlParameters: []

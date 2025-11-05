@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_9jEkh8d56R
+createdAt: 2025-11-05T11:33:59.504293
+updatedAt: 2025-11-05T11:40:26.007260
+workspaceId: wk_86549zFCyz
+folderId: fl_eHkDuyTdMn
+authentication: {}
+authenticationType: null
+body:
+  text: "{\n  \"id\": \"0056b9c28cb6cd0e7c5a75e554aaced4e7312713862a72a25ed55f3e124e89c856ca1112209aa5b5fba2cddc98c6a12765eec9841ffdd8b6bceb87b5e315398fac63d5548d\", \n  \"chain\": \"${[ canton_network ]}\"\n}"
+bodyType: application/json
+description: This endpoint is exposed by the Attestors, to disclose necessary Rules (factory) contracts for applications.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: 2SYcNMqdy2
+method: POST
+name: Get Bitcoin Deposit Address
+sortPriority: 2000.0
+url: ${[ coordinator_url ]}/app/get-bitcoin-address
+urlParameters: []
