@@ -1,0 +1,83 @@
+type: http_request
+model: http_request
+id: rq_E4rpgHuGWD
+createdAt: 2025-11-05T13:29:14.740116
+updatedAt: 2025-11-05T13:33:01.620233
+workspaceId: wk_86549zFCyz
+folderId: fl_CKN3pdZFRu
+authentication: {}
+authenticationType: null
+body:
+  text: '{"meta":{}}'
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: accept
+  value: application/json, */*;q=0.8
+  id: null
+- enabled: true
+  name: accept-language
+  value: en-US,en;q=0.9
+  id: null
+- enabled: true
+  name: cache-control
+  value: no-cache
+  id: null
+- enabled: true
+  name: content-type
+  value: application/json
+  id: null
+- enabled: true
+  name: dnt
+  value: '1'
+  id: null
+- enabled: true
+  name: origin
+  value: https://utility.dev.canton.ibtc.network
+  id: null
+- enabled: true
+  name: pragma
+  value: no-cache
+  id: null
+- enabled: true
+  name: priority
+  value: u=1, i
+  id: null
+- enabled: true
+  name: referer
+  value: https://utility.dev.canton.ibtc.network/
+  id: null
+- enabled: true
+  name: sec-ch-ua
+  value: '"Not_A Brand";v="99", "Chromium";v="142"'
+  id: null
+- enabled: true
+  name: sec-ch-ua-mobile
+  value: ?0
+  id: null
+- enabled: true
+  name: sec-ch-ua-platform
+  value: '"macOS"'
+  id: null
+- enabled: true
+  name: sec-fetch-dest
+  value: empty
+  id: null
+- enabled: true
+  name: sec-fetch-mode
+  value: cors
+  id: null
+- enabled: true
+  name: sec-fetch-site
+  value: cross-site
+  id: null
+- enabled: true
+  name: user-agent
+  value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+  id: null
+method: POST
+name: Accept TransferOffer
+sortPriority: 2000.0
+url: ${[ utility_registry_url ]}/api/token-standard/v0/registrars/${[ dec_party ]}/registry/transfer-instruction/v1/0035f85c8dd24b58b387326060252b569ecb4cde351179096d5377477ff092c31dca111220074441ba7d9ea2f258f758b3e8a736ad47f46a9470952269573e64fc55eb49e0/choice-contexts/accept
+urlParameters: []
