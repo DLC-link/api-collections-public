@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_NZfpjizL6F
 createdAt: 2025-11-04T11:02:05.230783
-updatedAt: 2025-11-04T14:44:33.615614
+updatedAt: 2025-11-05T13:22:15.553768
 workspaceId: wk_86549zFCyz
 folderId: null
 authentication:
@@ -21,6 +21,6 @@ description: ''
 headers: []
 method: GET
 name: LedgerEnd
-sortPriority: -1762254125229.0
+sortPriority: 1000.0
 url: ${[ participant_url ]}/v2/state/ledger-end
 urlParameters: []

@@ -1,0 +1,50 @@
+type: http_request
+model: http_request
+id: rq_b2tRZGv25G
+createdAt: 2025-11-05T13:18:43.775922
+updatedAt: 2025-11-05T13:22:15.550950
+workspaceId: wk_86549zFCyz
+folderId: null
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value='YENC_eUE0azNuQwG63TiAgzTdo6KEkcTiPD9ZOp1anE5iEpRkiSlc2Ksjf44VkB3gtKwW5MMp0Q1S28JKihxZMS9gPgZuT6VtXtNE3mgbLq2w') ]}
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SGJHRUFBWGNKeTRhMUJuRzJHYmxySVdOWG5RR012U0k5TlRyRUtuNWN1Mmw5QkMvelhsTjV0TXhabTF3OEN1d0w0NSs0TG9vWFpiU0pRR01DZA') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+        "verbose": true,
+        "activeAtOffset": ${[ response.body.path(request='rq_NZfpjizL6F', path=b64'JC5vZmZzZXQ', behavior='always') ]},
+        "filter": {
+            "filtersByParty": {
+                "${[ user_party ]}": {
+                    "cumulative": [
+                        {
+                            "identifierFilter": {
+                                "WildcardFilter": {
+                                    "value": {
+                                        "includeCreatedEventBlob": true
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Get Full ACS
+sortPriority: 0.0
+url: ${[ participant_url ]}/v2/state/active-contracts
+urlParameters: []

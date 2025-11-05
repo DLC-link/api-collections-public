@@ -2,7 +2,7 @@ type: folder
 model: folder
 id: fl_eHkDuyTdMn
 createdAt: 2025-11-05T09:05:40.737264
-updatedAt: 2025-11-05T09:05:43.806479
+updatedAt: 2025-11-05T13:22:15.561800
 workspaceId: wk_86549zFCyz
 folderId: null
 authentication: {}
@@ -10,4 +10,4 @@ authenticationType: null
 description: ''
 headers: []
 name: Mint
-sortPriority: -1174836100000.0
+sortPriority: 4000.0

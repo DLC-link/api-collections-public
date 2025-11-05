@@ -1,0 +1,69 @@
+type: environment
+model: environment
+id: ev_Rtc57Rr3rF
+workspaceId: wk_86549zFCyz
+createdAt: 2025-11-04T11:35:38.288841
+updatedAt: 2025-11-05T13:25:19.944508
+name: Devnet - UserFlow
+public: true
+base: false
+parentModel: environment
+parentId: ev_8qmcv3Eco5
+variables:
+- enabled: true
+  name: validator_client_id
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R0ZsTmROTmh6eERpZmdnK2ZnaFdlY3pkd2tXQkw3VSsveWdiZmZlRnpLR1djb29OQ2V6UXN6ejJqMWY0clNWMWZKU0hLUzNRPT0') ]}
+  id: pQ5kJAvc7Y
+- enabled: true
+  name: validator_client_secret
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R1V4bldnTUFNSjdIUmdzUU9sZC9JbVRwNWZDUXdvczNod0N2N0p2cUNoTWRnTERReEJDZ25nYlk5OWtYYmJFaEx3Zk44Q1BaTFQrUWZPWGtKZXBWcFcvRm5rV05wbTEvMD0') ]}
+  id: Te9kqZAEQM
+- enabled: true
+  name: participant_url
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RTBWUHBwdW85WURCZEhMUHZ6Q0syc3NGdnp4Y2R1VHBEMTJwL2lGL3FvRm5vRkxFQ2pDejh4S3kyQXBDdnoyZDcrYkU1QTk4NGNYQjNVdGlKV3NVUG9wVy9JZ1NyeWFyR3ZFV1M1MVM3aWZRRWY3SkdLMGdmUmUvWXZzSzZmLzJ6S0crRTRhZkVDeGRJPQ') ]}
+  id: wkehDeKsd9
+- enabled: true
+  name: oauth_url
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R0NGMzFaWGlBRWl0MVNRSlZuOE4vYmZvNGpoMTUxRGtERkdSN09Bb0txQnU2dHp4MzA0clJhcyszak1vVytYaWNzR1F6TjgyZm5TYlhDOVhtUXkwTnhnOUZkZ21nS2lZeGRZQ0hzSVl0VnpzaVE2bmFqaHVWS21pdmMyL3JyM1A0ZFhaa2dSTjFJUGl5eDhkYXJ3cHhBeXpVVmlJV2RRb3dGbm5ic2pHeDJSZ0FwV3hKYVhmQlZYdTV0QVlOVG1RPT0') ]}
+  id: aBh8nBkkti
+- enabled: true
+  name: coordinator_url
+  value: https://devnet.dlc.link/attestor-2
+  id: TjcqHkChXs
+- enabled: true
+  name: canton_network
+  value: canton-devnet
+  id: uS6W8BMm5p
+- enabled: true
+  name: dec_party
+  value: cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff
+  id: AWuX6hSCwm
+- enabled: true
+  name: utility_registry_url
+  value: https://api.utilities.digitalasset-dev.com
+  id: sSAHsJT0dh
+- enabled: true
+  name: oauth_username
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R0dKNXEvVWNxNUdJV244dlAyT0ZRN1k4S05nd0xBQVBtSGxGZW1tRk5Jcno4VTZIRmlqaDZqeUl1N2VtaVdOalFWN2RnNHFRPT0') ]}
+  id: ZmrYkS3QEe
+- enabled: true
+  name: oauth_user_pwd
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RkEzQ0I3R09mMWpBTWZyYWUyVkN4Y0xoQkZ4bCs0c1VjVGFsMHVTc1JOOXJ5enZtbVBROGcrRGI1MXpveU9jUUs3ZGNQMDMvb2NIaHNLOFE9PQ') ]}
+  id: gqqzTNESC2
+- enabled: true
+  name: user_party
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SDBqZEpseU5rdXVicVM1UUdpZTAxM3dKMGJHK3VSdkJnRnR1Ri9EL1dVZXdzTERXZ3ZGM083SmdtWW1Ramxuek5HTHIwK1pXVUZpOGJoTTc4WnpQbGE5NzRRMW9jVnVuWkhkdDN3MytBSGM2ZmRESVZSQ0ovYzczQzdTaFhvTmdOMkRWTElhQzh2M0pIbThoWEdaM3R6Wmw1Z3FncGs') ]}
+  id: 6cEFYtMNhA
+- enabled: true
+  name: da_rules_full_template
+  value: '#cbtc:CBTC.DepositAccount:CBTCDepositAccountRules'
+  id: u4HTuditIH
+- enabled: true
+  name: bitcoin_rpc_url
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R29xc1ptR0gzUkRDdkU5MC9sVmQ1c0pLRGNhNi9FMUM0K05KMFZVcmY0cS9XYyszTDkrQlFWMFQ1NGlLWmVuT0JDU0pXcGdjeVlxKzF0ZVpUMjcwY1hEd1JS') ]}
+  id: 8pUvfXNv9q
+- enabled: true
+  name: receiver_party
+  value: 476c4247838b9cd24e2103456461a47d::12208b1a19260c61dfd04f0d531d234f627a180232adafd612bba21c4a0d78154222
+  id: jcKcDU59U5
+color: null
