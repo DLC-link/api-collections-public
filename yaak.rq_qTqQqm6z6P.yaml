@@ -1,0 +1,56 @@
+type: http_request
+model: http_request
+id: rq_qTqQqm6z6P
+createdAt: 2025-11-05T14:42:21.084325
+updatedAt: 2025-11-05T15:10:43.715648
+workspaceId: wk_86549zFCyz
+folderId: fl_CKN3pdZFRu
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RUFLdnVBOTBSa2RnYXhUU3hjZmVMM3paNS9ja3RWN0h6ZDhKTGd2R3VhL0V6VGgyQkJGQlB2azhLTVRNMXFnRS9oZzlzTUhBbU44V0dkNEowT1c4eVV4Ymd4ak9xVA') ]}
+  credentials: basic
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RS8zNEZyb3RjMEFXY3N0OUNTaXE4bmRvTG5MNGU1Y1c5SEEwYlhZMHptSkZJdVc5UE4ybmpQYzNlcFhZNHhDVGxQQkoxRXFHNHFzeGo0VWczZw') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+      "commands": [
+        {
+          "ExerciseCommand": {
+            "templateId": "#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferInstruction",
+            "contractId": "0035f85c8dd24b58b387326060252b569ecb4cde351179096d5377477ff092c31dca111220074441ba7d9ea2f258f758b3e8a736ad47f46a9470952269573e64fc55eb49e0",
+            "choice": "TransferInstruction_Accept",
+            "choiceArgument": {
+              "extraArgs": {
+                "context": {
+                  "values": ${[ response.body.path(request='rq_E4rpgHuGWD', path=b64'JC5jaG9pY2VDb250ZXh0RGF0YS52YWx1ZXM', behavior='smart') ]}
+                },
+                "meta": {
+                  "values": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "commandId": "commandId3",
+      "actAs": [
+        "${[ user_party ]}"
+      ],
+      "disclosedContracts": ${[ response.body.path(request='rq_E4rpgHuGWD', path=b64'JC5kaXNjbG9zZWRDb250cmFjdHM', behavior='smart') ]}
+    }
+bodyType: application/json
+description: 'contract_id is the TransferOffer itself. '
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Accept TransferOffer
+sortPriority: 3000.0
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+urlParameters: []
