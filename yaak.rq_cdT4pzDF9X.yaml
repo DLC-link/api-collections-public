@@ -1,0 +1,56 @@
+type: http_request
+model: http_request
+id: rq_cdT4pzDF9X
+createdAt: 2025-11-07T12:10:33.508889
+updatedAt: 2025-11-07T13:28:20.233200
+workspaceId: wk_86549zFCyz
+folderId: fl_CKN3pdZFRu
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "choiceArguments": {
+        "expectedAdmin": "${[ dec_party ]}",
+        "transfer": {
+          "sender": "${[ user_party ]}",
+          "receiver": "${[ receiver_party ]}",
+          "amount": "1.0",
+          "instrumentId": {
+            "admin": "${[ dec_party ]}",
+            "id": "CBTC"
+          },
+          "requestedAt": "${[ timestamp.iso8601() ]}",
+          "executeBefore": "${[ timestamp.offset(date=b64'JHtbIHRpbWVzdGFtcC5pc284NjAxKCkgXX0', expression=b64'KzVk') ]}",
+          "inputHoldingCids": [
+            "00d0ea905e30908123fd22e297aa5bbb28af2d911eff151d2e1c06e40eba7cf219ca1112208f34d80958cdd2b23a0f02b0660cc6bf6fa827d1dc70ed618d72efa5857454e3"
+          ],
+          "meta": {
+            "values": {
+              "splice.lfdecentralizedtrust.org/reason": ""
+            }
+          }
+        },
+        "extraArgs": {
+          "context": {
+            "values": {}
+          },
+          "meta": {
+            "values": {}
+          }
+        }
+      },
+      "excludeDebugFields": true
+    }
+bodyType: application/json
+description: "Optionally, one can fetch all required information for the transfercreation using this endpoint on the registry.\n\nIt still needs an inputHoldingCid. "
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Get Transfer Inputs
+sortPriority: 0.0
+url: ${[ utility_registry_url ]}/api/token-standard/v0/registrars/${[ dec_party ]}/registry/transfer-instruction/v1/transfer-factory
+urlParameters: []

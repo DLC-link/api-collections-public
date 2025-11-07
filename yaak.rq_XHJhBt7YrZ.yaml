@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_XHJhBt7YrZ
 createdAt: 2025-11-05T11:50:15.185244
-updatedAt: 2025-11-05T14:42:23.864477
+updatedAt: 2025-11-07T13:27:35.450234
 workspaceId: wk_86549zFCyz
 folderId: fl_CKN3pdZFRu
 authentication:
@@ -99,6 +99,6 @@ headers:
   id: rwMyVfJqGU
 method: POST
 name: Transfer
-sortPriority: 0.0
+sortPriority: 1000.0
 url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
 urlParameters: []

@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_MQWKSXStu7
 createdAt: 2025-11-05T11:38:40.098902
-updatedAt: 2025-11-05T11:46:01.619409
+updatedAt: 2025-11-06T13:05:01.800530
 workspaceId: wk_86549zFCyz
 folderId: fl_eHkDuyTdMn
 authentication: {}
@@ -14,7 +14,7 @@ body:
       "id": "jstest",
       "method": "sendtoaddress",
       "params": [
-        "bcrt1pm7mze0cgdeam0r92f4pd3shhuhj5ydvgra5dy5f7a5554usfwu7s9udnsd",
+        "bcrt1pxq4jsv3lax73d2n6xtqe66v26vds4n9a8lzsw6zk7fplcgldl82qegqha2",
         10,
         "Sending btc"
       ]
