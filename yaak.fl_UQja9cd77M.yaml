@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_UQja9cd77M
+createdAt: 2025-11-07T18:54:25.851394
+updatedAt: 2025-11-07T19:13:22.252164
+workspaceId: wk_86549zFCyz
+folderId: null
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Batch
+sortPriority: 7000.0

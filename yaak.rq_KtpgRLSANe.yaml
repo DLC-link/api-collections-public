@@ -1,0 +1,104 @@
+type: http_request
+model: http_request
+id: rq_KtpgRLSANe
+createdAt: 2025-11-07T19:13:19.823235
+updatedAt: 2025-11-07T19:21:41.888328
+workspaceId: wk_86549zFCyz
+folderId: fl_UQja9cd77M
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R2x4KzV6bTlybDhQYTlFRDVsY0VLanAwSi9oSlZVOUZpbU5FZzhnT2FRcVNFVCtob1NoZEkrTitYZnZYSHA3L2FuTG1hM0lYMjRSM1ZUSVN2eUJUUk51WXdSNVgzMw') ]}
+  credentials: basic
+  grantType: password
+  password: ${[ secure(value='YENC_eUE0azNuQwEgL0js5tW7goWpgzuMnNJ8mWYxMs5agQZDEMgGK0O5PvRDRPkpaaWOAANp7Gvexw0xqdvi83cgkexFSfEC') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+      "actAs": [
+        "${[ user_party ]}"
+      ],
+      "commandId": "someCommandId1",
+      "disclosedContracts": [
+        {
+          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS50ZW1wbGF0ZV9pZA', behavior='smart') ]}",
+          "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='smart') ]}",
+          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='smart') ]}",
+          "synchronizerId": ""
+        },
+        {
+          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24udGVtcGxhdGVfaWQ', behavior='smart') ]}",
+          "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}",
+          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY3JlYXRlZF9ldmVudF9ibG9i', behavior='smart') ]}",
+          "synchronizerId": ""
+        }
+      ],
+      "commands": [
+        {
+          "ExerciseCommand": {
+            "templateId": "#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferFactory",
+            "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='smart') ]}",
+            "choice": "TransferFactory_Transfer",
+            "choiceArgument": {
+              "expectedAdmin": "${[ dec_party ]}",
+              "transfer": {
+                "sender": "${[ user_party ]}",
+                "receiver": "${[ user_party ]}",
+                "amount": "0.00006",
+                "instrumentId": {
+                  "admin": "${[ dec_party ]}",
+                  "id": "CBTC"
+                },
+                "requestedAt": "${[ timestamp.iso8601() ]}",
+                "executeBefore": "${[ timestamp.offset(date=b64'JHtbIHRpbWVzdGFtcC5pc284NjAxKCkgXX0', expression=b64'KzVk') ]}",
+                "inputHoldingCids": [
+                  "007bdc80c8e67d94809bce2375d3b2e81ffd2f5fcd3ccfb8dc631cee4c8fdc1ba3ca1112201a90707c5b1ee21beabe18f721db221bee317be518ece8131578010180f8c02e", "0025bb9b73a5de5cdaf873fdf2f4649ad26a825dc5c61dfb21db47e756b7c6246bca111220ef70c5beccc16936d38bad0f2706203c746a2f4cbe6e6c355d8b72a69797ff49", "00152b772a64875f1859c4781e16f572a40441bde4f37f0b7ee174c76f80dc1162ca111220d745121c19b06bb3f6fce0110afb948cda484730df97193240997bb590e1a6ee", "00f87a2a388c679b43943829c9037b814880ad35e1201eb757be35d7f5fbda557cca111220dcd0fb54c4d57ef26dc33b9908e6b0cdb3f1eeabaf053db44afcc003f3606f14", "00128b1a343f5ed1c8fb61c2292fc103cd97ffe4ad20295b86fc172c568e7ea226ca111220a7021c2325881bfc1552d100a1e70e353b88983b5fe9ba7b7729819f44d8fa76"
+                ],
+                "meta": {
+                  "values": {}
+                }
+              },
+              "extraArgs": {
+                "context": {
+                  "values": {
+                    "utility.digitalasset.com/instrument-configuration": {
+                      "tag": "AV_ContractId",
+                      "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}"
+                    },
+                    "utility.digitalasset.com/sender-credentials": {
+                      "tag": "AV_List",
+                      "value": []
+                    },
+                    "instrument-configuration": {
+                      "tag": "AV_ContractId",
+                      "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}"
+                    },
+                    "sender-credentials": {
+                      "tag": "AV_List",
+                      "value": []
+                    }
+                  }
+                },
+                "meta": {
+                  "values": {}
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: rwMyVfJqGU
+method: POST
+name: Merge UTXOs
+sortPriority: 2000.0
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+urlParameters: []

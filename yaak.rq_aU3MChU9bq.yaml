@@ -1,0 +1,105 @@
+type: http_request
+model: http_request
+id: rq_aU3MChU9bq
+createdAt: 2025-11-07T19:00:32.527211
+updatedAt: 2025-11-07T19:13:30.393136
+workspaceId: wk_86549zFCyz
+folderId: fl_UQja9cd77M
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R2x4KzV6bTlybDhQYTlFRDVsY0VLanAwSi9oSlZVOUZpbU5FZzhnT2FRcVNFVCtob1NoZEkrTitYZnZYSHA3L2FuTG1hM0lYMjRSM1ZUSVN2eUJUUk51WXdSNVgzMw') ]}
+  credentials: basic
+  grantType: password
+  password: ${[ secure(value='YENC_eUE0azNuQwEgL0js5tW7goWpgzuMnNJ8mWYxMs5agQZDEMgGK0O5PvRDRPkpaaWOAANp7Gvexw0xqdvi83cgkexFSfEC') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+      "actAs": [
+        "${[ user_party ]}"
+      ],
+      "commandId": "someCommandId2",
+      "disclosedContracts": [
+        {
+          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS50ZW1wbGF0ZV9pZA', behavior='smart') ]}",
+          "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='smart') ]}",
+          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='smart') ]}",
+          "synchronizerId": ""
+        },
+        {
+          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24udGVtcGxhdGVfaWQ', behavior='smart') ]}",
+          "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}",
+          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY3JlYXRlZF9ldmVudF9ibG9i', behavior='smart') ]}",
+          "synchronizerId": ""
+        }
+      ],
+      "commands": [
+        {
+          "ExerciseCommand": {
+            "templateId": "#batch-processor:Batch.HoldingBatchProcessing:HoldingBatchProcessing",
+            "contractId": "00fc91524d627f097eb089e071c76f9e1daa5e595f2cea67d20de2bb059621c16fca1112209f65d82b78d018ac8df2defcc4dacc3751e93b9efbf8d831ed06a62722476424",
+            "choice": "HoldingBatchProcessing_BatchTransfer",
+            "choiceArgument": {
+              "transferFactoryCid": "00d58a5f061f086b3c4b405b57ca08f4cefcb7f3a27a26089be6388eb62ee619a8ca1112200991d565daa04ca691901bc04238a8655e2c068039130e4c00027eac2675d9f4",
+              "expectedAdmin": "${[ dec_party ]}",
+              "inputHoldingCids": [
+                "0033d08621d1f7ff31d36245dff906bc10debe0eb829ba8c25a864bc536546a5b5ca111220cfec82af97bb1fad4f19ce44cdaea38c18dc1e69237a4db3fd3b1be0a90dcc49"
+              ],
+              "instrumentId": {
+                "admin": "${[ dec_party ]}",
+                "id": "CBTC"
+              },
+              "destinations": [
+                {
+                  "receiver": "iBTC-validator-1::1220fa8543db6c66fe3a55b1f180c8dfc7f876265c76684fbc1d35d89e02c8aafe8e",
+                  "amount": "0.123"
+                },
+                {
+                  "receiver": "476c4247838b9cd24e2103456461a47d::12208b1a19260c61dfd04f0d531d234f627a180232adafd612bba21c4a0d78154222",
+                  "amount": "0.123"
+                }
+              ],
+              "extraArgs": {
+                "context": {
+                  "values": {
+                    "utility.digitalasset.com/instrument-configuration": {
+                      "tag": "AV_ContractId",
+                      "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}"
+                    },
+                    "utility.digitalasset.com/sender-credentials": {
+                      "tag": "AV_List",
+                      "value": []
+                    },
+                    "instrument-configuration": {
+                      "tag": "AV_ContractId",
+                      "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}"
+                    },
+                    "sender-credentials": {
+                      "tag": "AV_List",
+                      "value": []
+                    }
+                  }
+                },
+                "meta": {
+                  "values": {}
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: rwMyVfJqGU
+method: POST
+name: Batch Distribute
+sortPriority: 1000.0
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+urlParameters: []

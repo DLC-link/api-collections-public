@@ -1,0 +1,46 @@
+type: http_request
+model: http_request
+id: rq_ryKVgDbc5a
+createdAt: 2025-11-07T18:54:45.549393
+updatedAt: 2025-11-07T19:13:30.390689
+workspaceId: wk_86549zFCyz
+folderId: fl_UQja9cd77M
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SHhYTHF6UEJidFhtYmtmMEZlanpySEtRWkFKa0xBUmFRc2V0QkR4NXhHamNuRHY4c0lvUzRpUzlaKzN2UnJidUhEdFJ0ZkRNcVZLdXBYWWZVSUo1eS9lZzBRdjMyWA') ]}
+  credentials: basic
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RlNUUXlQaDA5ejNXMGIxbnhCbFkyT3N0cUVxT3VjQzJEZUlTaVhXcnU5WmNVVU10TjdPaWltSFphWnFWSVB4bkoremMxWnR0YzQ4VEw4RTFZKw') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+      "actAs": [
+        "${[ user_party ]}"
+      ],
+      "commandId": "deployCommandId1",
+      "commands": [
+        {
+          "CreateCommand": {
+            "createArguments": {
+              "owner": "${[ user_party ]}"
+            },
+            "templateId": "#batch-processor:Batch.HoldingBatchProcessing:HoldingBatchProcessing"
+          }
+        }
+      ]
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Deploy
+sortPriority: 0.0
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+urlParameters: []
