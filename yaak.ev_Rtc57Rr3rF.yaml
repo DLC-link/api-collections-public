@@ -3,7 +3,7 @@ model: environment
 id: ev_Rtc57Rr3rF
 workspaceId: wk_86549zFCyz
 createdAt: 2025-11-04T11:35:38.288841
-updatedAt: 2025-11-05T13:25:19.944508
+updatedAt: 2025-11-19T18:35:04.371615
 name: Devnet - UserFlow
 public: true
 base: false
@@ -66,4 +66,5 @@ variables:
   name: receiver_party
   value: 476c4247838b9cd24e2103456461a47d::12208b1a19260c61dfd04f0d531d234f627a180232adafd612bba21c4a0d78154222
   id: jcKcDU59U5
-color: null
+color: var(--secondary)
+sortPriority: 0.0

@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_qTqQqm6z6P
 createdAt: 2025-11-05T14:42:21.084325
-updatedAt: 2025-11-07T13:27:35.455820
+updatedAt: 2025-11-07T15:05:58.375083
 workspaceId: wk_86549zFCyz
 folderId: fl_CKN3pdZFRu
 authentication:
@@ -21,7 +21,7 @@ body:
         {
           "ExerciseCommand": {
             "templateId": "#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferInstruction",
-            "contractId": "0035f85c8dd24b58b387326060252b569ecb4cde351179096d5377477ff092c31dca111220074441ba7d9ea2f258f758b3e8a736ad47f46a9470952269573e64fc55eb49e0",
+            "contractId": "00652a9823182494315ae0d76302fda76c844b69529ac1e27d2e114a8467b1cdf8ca111220ae62833b8996161c4884f68560ee72750c7c8903a4cc00baac75385a96dcd43e",
             "choice": "TransferInstruction_Accept",
             "choiceArgument": {
               "extraArgs": {

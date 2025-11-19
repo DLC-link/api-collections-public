@@ -1,0 +1,47 @@
+type: websocket_request
+model: websocket_request
+id: wr_hwQeC99Kzn
+createdAt: 2025-11-13T14:29:15.725759
+updatedAt: 2025-11-13T15:08:11.437704
+workspaceId: wk_86549zFCyz
+folderId: fl_CKN3pdZFRu
+authentication:
+  grantType: password
+authenticationType: oauth2
+description: ''
+headers:
+- enabled: true
+  name: Sec-WebSocket-Protocol
+  value: jwt.token.
+  id: ueABuHizWw
+- enabled: true
+  name: ''
+  value: ''
+  id: F7zs3azMIN
+message: |-
+  {
+      "verbose": true,
+      "activeAtOffset": ${[ response.body.path(request='rq_NZfpjizL6F', path=b64'JC5vZmZzZXQ', behavior='always') ]},
+      "filter": {
+          "filtersByParty": {
+              "${[ user_party ]}": {
+                  "cumulative": [
+                      {
+                          "identifierFilter": {
+                              "TemplateFilter": {
+                                  "value": {
+                                      "templateId": "#utility-registry-app-v0:Utility.Registry.App.V0.Model.Transfer:TransferOffer",
+                                      "includeCreatedEventBlob": true
+                                  }
+                              }
+                          }
+                      }
+                  ]
+              }
+          }
+      }
+  }
+name: ''
+sortPriority: 2333.3333333333335
+url: ${[ participant_ws_url ]}/v2/state/active-contracts
+urlParameters: []
