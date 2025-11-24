@@ -1,10 +1,10 @@
 type: http_request
 model: http_request
-id: rq_GHc6t5kkD7
-createdAt: 2025-11-05T11:40:23.515198
-updatedAt: 2025-11-24T10:17:56.224726
+id: rq_xwas2F6hBz
+createdAt: 2025-11-24T10:18:24.362280
+updatedAt: 2025-11-24T10:42:49.820760
 workspaceId: wk_86549zFCyz
-folderId: fl_eHkDuyTdMn
+folderId: fl_DWepmt8u5p
 authentication: {}
 authenticationType: null
 body:
@@ -41,6 +41,6 @@ headers:
   id: null
 method: POST
 name: Get All Holdings
-sortPriority: 4000.0
+sortPriority: 2000.0
 url: ${[ participant_url ]}/v2/state/active-contracts
 urlParameters: []

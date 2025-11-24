@@ -1,0 +1,52 @@
+type: http_request
+model: http_request
+id: rq_o695Htw3zs
+createdAt: 2025-11-24T10:26:29.826007
+updatedAt: 2025-11-24T10:42:49.815457
+workspaceId: wk_86549zFCyz
+folderId: fl_DWepmt8u5p
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RUFLdnVBOTBSa2RnYXhUU3hjZmVMM3paNS9ja3RWN0h6ZDhKTGd2R3VhL0V6VGgyQkJGQlB2azhLTVRNMXFnRS9oZzlzTUhBbU44V0dkNEowT1c4eVV4Ymd4ak9xVA') ]}
+  credentials: basic
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RS8zNEZyb3RjMEFXY3N0OUNTaXE4bmRvTG5MNGU1Y1c5SEEwYlhZMHptSkZJdVc5UE4ybmpQYzNlcFhZNHhDVGxQQkoxRXFHNHFzeGo0VWczZw') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+        "verbose": true,
+        "activeAtOffset": ${[ response.body.path(request='rq_NZfpjizL6F', path=b64'JC5vZmZzZXQ', behavior='always') ]},
+        "filter": {
+            "filtersByParty": {
+                "${[ user_party ]}": {
+                    "cumulative": [
+                        {
+                            "identifierFilter": {
+                                "TemplateFilter": {
+                                    "value": {
+                                        "templateId": "#cbtc:CBTC.WithdrawAccount:CBTCWithdrawAccount",
+                                        "includeCreatedEventBlob": true
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Get Withdraw Accounts
+sortPriority: 0.0
+url: ${[ participant_url ]}/v2/state/active-contracts
+urlParameters: []
