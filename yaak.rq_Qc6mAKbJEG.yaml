@@ -1,0 +1,43 @@
+type: http_request
+model: http_request
+id: rq_Qc6mAKbJEG
+createdAt: 2025-11-24T16:52:09.299461
+updatedAt: 2025-11-24T17:08:52.387780
+workspaceId: wk_86549zFCyz
+folderId: fl_DWepmt8u5p
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "commands": [
+        {
+          "ExerciseCommand": {
+            "templateId": "${[ wa_full_template ]}",
+            "contractId": "00051467a107dee488d25fcc045658145bd8ca8181941656415f1d019f5521d621ca1212208af70f53ec81b0b8e2d0d256c1bb92d107454383686b29e94c6361b1b1123309",
+            "choice": "CBTCWithdrawAccount_UpdateDestinationAddress",
+            "choiceArgument": {
+              "newDestinationBtcAddress": "bcrt1qh3fqyltvh0npqvpnkln78ywc9jwejrwhz4hzfz"
+            }
+          }
+        }
+      ],
+      "actAs": [
+        "${[ user_party ]}"
+      ],
+      "commandId": "cmd123211",
+      "disclosedContracts": [
+      ]
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: JYwbu3VBEQ
+method: POST
+name: Update DestinationAddress
+sortPriority: 5000.0
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+urlParameters: []

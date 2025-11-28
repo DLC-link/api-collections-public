@@ -1,8 +1,8 @@
 type: http_request
 model: http_request
-id: rq_o695Htw3zs
-createdAt: 2025-11-24T10:26:29.826007
-updatedAt: 2025-11-24T17:08:52.378164
+id: rq_KS5kpnjesz
+createdAt: 2025-11-24T17:08:46.060739
+updatedAt: 2025-11-24T17:09:02.689397
 workspaceId: wk_86549zFCyz
 folderId: fl_DWepmt8u5p
 authentication: {}
@@ -20,7 +20,7 @@ body:
                             "identifierFilter": {
                                 "TemplateFilter": {
                                     "value": {
-                                        "templateId": "#cbtc:CBTC.WithdrawAccount:CBTCWithdrawAccount",
+                                        "templateId": "#cbtc:CBTC.WithdrawRequest:CBTCWithdrawRequest",
                                         "includeCreatedEventBlob": true
                                     }
                                 }
@@ -39,7 +39,7 @@ headers:
   value: application/json
   id: null
 method: POST
-name: Get Withdraw Accounts
-sortPriority: 0.0
+name: Get Withdraw Requests
+sortPriority: 4000.0
 url: ${[ participant_url ]}/v2/state/active-contracts
 urlParameters: []
