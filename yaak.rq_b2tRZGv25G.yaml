@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_b2tRZGv25G
 createdAt: 2025-11-05T13:18:43.775922
-updatedAt: 2025-11-07T19:13:22.241116
+updatedAt: 2025-12-02T19:24:22.667636
 workspaceId: wk_86549zFCyz
 folderId: null
 authentication:
@@ -45,6 +45,6 @@ headers:
   id: null
 method: POST
 name: Get Full ACS
-sortPriority: 0.0
+sortPriority: 1000.0
 url: ${[ participant_url ]}/v2/state/active-contracts
 urlParameters: []

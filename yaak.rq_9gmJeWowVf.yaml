@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_9gmJeWowVf
 createdAt: 2025-11-04T14:36:51.364293
-updatedAt: 2025-11-07T19:13:22.245093
+updatedAt: 2025-12-02T19:24:22.672650
 workspaceId: wk_86549zFCyz
 folderId: null
 authentication: {}
@@ -21,6 +21,6 @@ headers:
   id: 2SYcNMqdy2
 method: POST
 name: Get Account Rules Contracts
-sortPriority: 2000.0
+sortPriority: 3000.0
 url: ${[ coordinator_url ]}/app/get-account-contract-rules
 urlParameters: []

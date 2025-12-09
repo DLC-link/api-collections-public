@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_eW3P9YGa8t
 createdAt: 2025-11-05T11:47:29.226325
-updatedAt: 2025-11-07T19:13:22.246778
+updatedAt: 2025-12-02T19:24:22.675490
 workspaceId: wk_86549zFCyz
 folderId: null
 authentication: {}
@@ -21,6 +21,6 @@ headers:
   id: null
 method: POST
 name: Get Token Standard Contracts
-sortPriority: 3000.0
+sortPriority: 4000.0
 url: ${[ coordinator_url ]}/app/get-token-standard-contracts
 urlParameters: []
