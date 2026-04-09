@@ -2,11 +2,16 @@ type: http_request
 model: http_request
 id: rq_xwas2F6hBz
 createdAt: 2025-11-24T10:18:24.362280
-updatedAt: 2025-11-24T17:08:52.382344
+updatedAt: 2026-03-02T13:05:22.960118
 workspaceId: wk_86549zFCyz
 folderId: fl_DWepmt8u5p
-authentication: {}
-authenticationType: null
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ wallet_client_id ]}
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SEJIVFd5cUlPWlBQVUJCNDAvcktsYVFaUi9sVHl3UnNKRXozdUllMDRFVlFSb3hwOUE1TDN6SS9WaXZIdlREeXBkYTNCMHdNbTNWN3grdVE5eQ') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
 body:
   text: |-
     {

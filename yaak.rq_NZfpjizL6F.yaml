@@ -2,17 +2,23 @@ type: http_request
 model: http_request
 id: rq_NZfpjizL6F
 createdAt: 2025-11-04T11:02:05.230783
-updatedAt: 2025-12-02T19:24:22.669547
+updatedAt: 2026-03-30T12:40:23.634504
 workspaceId: wk_86549zFCyz
 folderId: null
-authentication: {}
-authenticationType: null
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RmZpc0JYK2RjTGM1UGF3ZExxZzZuN0Q3bVByUWJONHdHM2dOd25iSUozVGpHYkdTZU1mMFVHbEVrNGJ5Z0syaWJpSE90K1ZwWnhTQS9nblozU3BPUVBZVlc4ak5ieg') ]}
+  grantType: client_credentials
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R3k3V1pXcnFuYXpjblJlTkhmT214VDY0RnVYK3M1ajFuaUVkcHJNbStocE0zSjlDN3lHcWh1T3Z0U1Z0WC9jakV6Wm5SR0VwQmxpZzZtNDRUQQ') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
 body: {}
 bodyType: null
 description: ''
 headers: []
 method: GET
 name: LedgerEnd
-sortPriority: 2000.0
+sortPriority: 1000.0
 url: ${[ participant_url ]}/v2/state/ledger-end
 urlParameters: []

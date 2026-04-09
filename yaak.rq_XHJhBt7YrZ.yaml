@@ -2,96 +2,96 @@ type: http_request
 model: http_request
 id: rq_XHJhBt7YrZ
 createdAt: 2025-11-05T11:50:15.185244
-updatedAt: 2025-11-07T13:27:35.450234
+updatedAt: 2026-03-02T13:35:53.947766
 workspaceId: wk_86549zFCyz
 folderId: fl_CKN3pdZFRu
 authentication:
   accessTokenUrl: ${[ oauth_url ]}
-  clientId: ${[ validator_client_id ]}
-  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R2x4KzV6bTlybDhQYTlFRDVsY0VLanAwSi9oSlZVOUZpbU5FZzhnT2FRcVNFVCtob1NoZEkrTitYZnZYSHA3L2FuTG1hM0lYMjRSM1ZUSVN2eUJUUk51WXdSNVgzMw') ]}
+  clientId: ${[ wallet_client_id ]}
+  clientSecret: ''
   credentials: basic
   grantType: password
   password: ${[ secure(value='YENC_eUE0azNuQwEgL0js5tW7goWpgzuMnNJ8mWYxMs5agQZDEMgGK0O5PvRDRPkpaaWOAANp7Gvexw0xqdvi83cgkexFSfEC') ]}
   username: ${[ oauth_username ]}
 authenticationType: oauth2
 body:
-  text: |-
-    {
-      "actAs": [
-        "${[ user_party ]}"
-      ],
-      "commandId": "someCommandId1",
-      "disclosedContracts": [
-        {
-          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS50ZW1wbGF0ZV9pZA', behavior='smart') ]}",
+  text: "{\n  \"actAs\": [\n    \"${[ user_party ]}\"\n  ],\n  \"commandId\": \"someCommandId1\",\n  \"disclosedContracts\": ${[ response.body.path(request='rq_cdT4pzDF9X', behavior='smart', ttl='0', result='first', join=b64'LCA', path=b64'JC5jaG9pY2VDb250ZXh0LmRpc2Nsb3NlZENvbnRyYWN0cw') ]},\n  \"commands\": [\n    {\n      \"ExerciseCommand\": {\n        \"templateId\": \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferFactory\",\n        \"contractId\": \"${[ response.body.path(request='rq_cdT4pzDF9X', behavior='smart', ttl='0', result='first', join=b64'LCA', path=b64'JC5mYWN0b3J5SWQ') ]}\",\n        \"choice\": \"TransferFactory_Transfer\",\n        \"choiceArgument\": {\n          \"expectedAdmin\": \"${[ dec_party ]}\",\n          \"transfer\": {\n            \"sender\": \"${[ user_party ]}\",\n            \"receiver\": \"cbtc-incentive-sender::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2\",\n            \"amount\": \"0.00001\",\n            \"instrumentId\": {\n              \"admin\": \"${[ dec_party ]}\",\n              \"id\": \"CBTC\"\n            },\n            \"requestedAt\": \"${[ timestamp.iso8601() ]}\",\n            \"executeBefore\": \"${[ timestamp.offset(date=b64'JHtbIHRpbWVzdGFtcC5pc284NjAxKCkgXX0', expression=b64'KzVk') ]}\",\n            \"inputHoldingCids\": [\n              \"0051f4b777161b8117c994092612dea4cc1c8a5e6b705e099e2e5eff202423cb0dca121220ba8b395e92d080c367b3d17b2ddac855bcf31f7d41cf71bbf98b46a6bb62de5e\"\n            ],\n            \"meta\": {\n              \"values\": {}\n            }\n          },\n          \"extraArgs\": {\n            \"context\": {\n              \"values\": \n              ${[ response.body.path(request='rq_cdT4pzDF9X', behavior='smart', ttl='0', result='first', join=b64'LCA', path=b64'JC5jaG9pY2VDb250ZXh0LmNob2ljZUNvbnRleHREYXRhLnZhbHVlcw') ]}\n            },\n            \"meta\": {\n              \"values\": {}\n            }\n          }\n        }\n      }\n    }\n  ]\n}"
+bodyType: application/json
+description: |-
+  {
+    "actAs": [
+      "${[ user_party ]}"
+    ],
+    "commandId": "someCommandId1",
+    "disclosedContracts": [
+      {
+        "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS50ZW1wbGF0ZV9pZA', behavior='smart') ]}",
+        "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='smart') ]}",
+        "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='smart') ]}",
+        "synchronizerId": ""
+      },
+      {
+        "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24udGVtcGxhdGVfaWQ', behavior='smart') ]}",
+        "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}",
+        "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY3JlYXRlZF9ldmVudF9ibG9i', behavior='smart') ]}",
+        "synchronizerId": ""
+      }
+    ],
+    "commands": [
+      {
+        "ExerciseCommand": {
+          "templateId": "#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferFactory",
           "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='smart') ]}",
-          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='smart') ]}",
-          "synchronizerId": ""
-        },
-        {
-          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24udGVtcGxhdGVfaWQ', behavior='smart') ]}",
-          "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}",
-          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY3JlYXRlZF9ldmVudF9ibG9i', behavior='smart') ]}",
-          "synchronizerId": ""
-        }
-      ],
-      "commands": [
-        {
-          "ExerciseCommand": {
-            "templateId": "#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferFactory",
-            "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='smart') ]}",
-            "choice": "TransferFactory_Transfer",
-            "choiceArgument": {
-              "expectedAdmin": "${[ dec_party ]}",
-              "transfer": {
-                "sender": "${[ user_party ]}",
-                "receiver": "${[ receiver_party ]}",
-                "amount": "0.005",
-                "instrumentId": {
-                  "admin": "${[ dec_party ]}",
-                  "id": "CBTC"
-                },
-                "requestedAt": "${[ timestamp.iso8601() ]}",
-                "executeBefore": "${[ timestamp.offset(date=b64'JHtbIHRpbWVzdGFtcC5pc284NjAxKCkgXX0', expression=b64'KzVk') ]}",
-                "inputHoldingCids": [
-                  "002ce9d6e49ae259c492e94833c582c20188a3d964c357e95c72348d7c29e3b212ca111220f0c80e7193e2a2e2153e0bc721508586da4ce6dc33d561d4204fbbcb46b137c5"
-                ],
-                "meta": {
-                  "values": {}
+          "choice": "TransferFactory_Transfer",
+          "choiceArgument": {
+            "expectedAdmin": "${[ dec_party ]}",
+            "transfer": {
+              "sender": "${[ user_party ]}",
+              "receiver": "cbtc-incentive-sender::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2",
+              "amount": "0.00001",
+              "instrumentId": {
+                "admin": "${[ dec_party ]}",
+                "id": "CBTC"
+              },
+              "requestedAt": "${[ timestamp.iso8601() ]}",
+              "executeBefore": "${[ timestamp.offset(date=b64'JHtbIHRpbWVzdGFtcC5pc284NjAxKCkgXX0', expression=b64'KzVk') ]}",
+              "inputHoldingCids": [
+                "0031395ca6ac6c17a5554ac77c3ad617b2056241d73cc68d67dbd80d1e2504cc95ca111220db699151100eccc3a20adf78c0ce346eaad320cf7db17e8a7dfb3f61e777d624"
+              ],
+              "meta": {
+                "values": {}
+              }
+            },
+            "extraArgs": {
+              "context": {
+                "values": {
+                  "utility.digitalasset.com/instrument-configuration": {
+                    "tag": "AV_ContractId",
+                    "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}"
+                  },
+                  "utility.digitalasset.com/sender-credentials": {
+                    "tag": "AV_List",
+                    "value": []
+                  },
+                  "instrument-configuration": {
+                    "tag": "AV_ContractId",
+                    "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}"
+                  },
+                  "sender-credentials": {
+                    "tag": "AV_List",
+                    "value": []
+                  }
                 }
               },
-              "extraArgs": {
-                "context": {
-                  "values": {
-                    "utility.digitalasset.com/instrument-configuration": {
-                      "tag": "AV_ContractId",
-                      "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}"
-                    },
-                    "utility.digitalasset.com/sender-credentials": {
-                      "tag": "AV_List",
-                      "value": []
-                    },
-                    "instrument-configuration": {
-                      "tag": "AV_ContractId",
-                      "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='smart') ]}"
-                    },
-                    "sender-credentials": {
-                      "tag": "AV_List",
-                      "value": []
-                    }
-                  }
-                },
-                "meta": {
-                  "values": {}
-                }
+              "meta": {
+                "values": {}
               }
             }
           }
         }
-      ]
-    }
-bodyType: application/json
-description: ''
+      }
+    ]
+  }
 headers:
 - enabled: true
   name: Content-Type
@@ -99,6 +99,6 @@ headers:
   id: rwMyVfJqGU
 method: POST
 name: Transfer
-sortPriority: 1000.0
+sortPriority: 2000.0
 url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
 urlParameters: []

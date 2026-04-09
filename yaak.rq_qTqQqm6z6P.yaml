@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_qTqQqm6z6P
 createdAt: 2025-11-05T14:42:21.084325
-updatedAt: 2025-11-07T15:05:58.375083
+updatedAt: 2026-03-02T12:48:17.597662
 workspaceId: wk_86549zFCyz
 folderId: fl_CKN3pdZFRu
 authentication:
@@ -26,7 +26,7 @@ body:
             "choiceArgument": {
               "extraArgs": {
                 "context": {
-                  "values": ${[ response.body.path(request='rq_E4rpgHuGWD', path=b64'JC5jaG9pY2VDb250ZXh0RGF0YS52YWx1ZXM', behavior='smart') ]}
+                  "values":${[ response.body.path(request='rq_E4rpgHuGWD', path=b64'JC5jaG9pY2VDb250ZXh0RGF0YS52YWx1ZXM', behavior='smart') ]}
                 },
                 "meta": {
                   "values": {}
@@ -51,6 +51,6 @@ headers:
   id: null
 method: POST
 name: Accept TransferOffer
-sortPriority: 4000.0
+sortPriority: 5000.0
 url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
 urlParameters: []

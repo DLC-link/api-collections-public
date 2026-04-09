@@ -2,11 +2,16 @@ type: http_request
 model: http_request
 id: rq_cdT4pzDF9X
 createdAt: 2025-11-07T12:10:33.508889
-updatedAt: 2025-11-07T13:28:20.233200
+updatedAt: 2026-03-30T12:42:07.467227
 workspaceId: wk_86549zFCyz
 folderId: fl_CKN3pdZFRu
-authentication: {}
-authenticationType: null
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ wallet_client_id ]}
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R1lVZllNZERGN3krR0tUYy9ick5qajQ2RW5uU0wzK3hjR0hrOTVBOU9DVmpJZ0hTUWNaSXByZ1FLekZUNXBHWlJSUVkxUjZaY3I3dC9jb2VFbg') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
 body:
   text: |-
     {
@@ -14,7 +19,7 @@ body:
         "expectedAdmin": "${[ dec_party ]}",
         "transfer": {
           "sender": "${[ user_party ]}",
-          "receiver": "${[ receiver_party ]}",
+          "receiver": "cbtc-incentive-sender::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2",
           "amount": "1.0",
           "instrumentId": {
             "admin": "${[ dec_party ]}",
@@ -23,7 +28,7 @@ body:
           "requestedAt": "${[ timestamp.iso8601() ]}",
           "executeBefore": "${[ timestamp.offset(date=b64'JHtbIHRpbWVzdGFtcC5pc284NjAxKCkgXX0', expression=b64'KzVk') ]}",
           "inputHoldingCids": [
-            "00d0ea905e30908123fd22e297aa5bbb28af2d911eff151d2e1c06e40eba7cf219ca1112208f34d80958cdd2b23a0f02b0660cc6bf6fa827d1dc70ed618d72efa5857454e3"
+            "004b0a441d04c189de2347093b25cb5335460bca326acf53da25ddca11811ef625ca111220b46b5f92b4f05d2f45544faa7e46234cdf8382df27b4354c4eaa34519e56362c"
           ],
           "meta": {
             "values": {
@@ -51,6 +56,6 @@ headers:
   id: null
 method: POST
 name: Get Transfer Inputs
-sortPriority: 0.0
+sortPriority: 1000.0
 url: ${[ utility_registry_url ]}/api/token-standard/v0/registrars/${[ dec_party ]}/registry/transfer-instruction/v1/transfer-factory
 urlParameters: []

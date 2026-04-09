@@ -2,13 +2,13 @@ type: http_request
 model: http_request
 id: rq_9jEkh8d56R
 createdAt: 2025-11-05T11:33:59.504293
-updatedAt: 2025-11-05T11:40:26.007260
+updatedAt: 2026-03-27T15:50:26.140883
 workspaceId: wk_86549zFCyz
 folderId: fl_eHkDuyTdMn
 authentication: {}
-authenticationType: null
+authenticationType: none
 body:
-  text: "{\n  \"id\": \"0056b9c28cb6cd0e7c5a75e554aaced4e7312713862a72a25ed55f3e124e89c856ca1112209aa5b5fba2cddc98c6a12765eec9841ffdd8b6bceb87b5e315398fac63d5548d\", \n  \"chain\": \"${[ canton_network ]}\"\n}"
+  text: "{\n  \"id\": \"00267ad2e2e15c70804c9e3b75b2351c4937c90c30c12dc3b5f114dffe9319950dca121220f4c741356796a74c33082a6d61ea3df327f28b029d265b7ffb4f70b584864252\", \n  \"chain\": \"${[ canton_network ]}\"\n}"
 bodyType: application/json
 description: This endpoint is exposed by the Attestors, to disclose necessary Rules (factory) contracts for applications.
 headers:
