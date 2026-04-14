@@ -3,7 +3,7 @@ model: environment
 id: ev_7suemqNhpB
 workspaceId: wk_86549zFCyz
 createdAt: 2026-02-04T03:46:08.735566
-updatedAt: 2026-03-30T12:41:11.285346
+updatedAt: 2026-04-14T11:45:45.833198
 name: Testnet - UserFlow
 public: true
 base: false
@@ -64,7 +64,7 @@ variables:
   id: N3vzTD7jwY
 - enabled: true
   name: validator_client_secret
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SE5GUml4cHczTm50U0NlK1ZJeDVUSWxXNVNDQW1wblVFYW9FeUg0RXpyUm1BVVg1U0s2TE5MUWc3eUdqZEFjdHNmMk5xZ3VTdnJQQXN3aFBNNDc2bURrUytWVmRBSktFcz0') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RVpzZStQVU9zbmhnNHplUmMvSC9JVXUvQVd4ZWhKcTUzbDBLdW4xVEp3U0JpT2pDR20zc1Z3eGxBZkttRmdqbHAreTBYRFRaWkhCbDJyNW81aVBnZmxnZXAvWE1qdDZFWT0') ]}
   id: DIuwrybp64
 - enabled: true
   name: participant_ws_url
@@ -84,7 +84,7 @@ variables:
   id: KMNCUgZpzf
 - enabled: true
   name: user_party
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SHNoQVNGUU85a0dqNjJBTVhLUEZsUjJYc0QvK01sNURXQzNlNFB3NkZNVG9LU0RXbFpLZzFROU5OWlZDRHhrQ2J4LzYra1JRTTlXaXVUK09abDVkS1BRKy9pT1h6M1ZrN2h4M2w2MlVVVlBpTVRRekl1WXhxblc2dWdIYVJhVUZaL21ybkZ6cXY4NzdsQjdSb3drS3kyS0puZlBQNmFESzdpV3g2Z3FFd2x3b1k9') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SFVCM2ZoTllHQWN0N3l1UmRLZFFWK1RsKzY2UklhMmUwQnVKU2RqUEQwaDNHK05RSlUyMXVveGt1YUVnM2k0ZFRWNTJIcFd4S2ZyM1FlYUdPMFBXRW9wYU01REZNeFFDaVB0ZFJ0Qm5GbnBFb3B5N2UwcUMxOFZjMCtzbGVmS2xyTUwwZTg5Mm1EanVtSzJ4citGVXk5OEV2bmxYR2hJZktzTUR1OFIrUEJNODQ9') ]}
   id: MyGICRw6eN
 - enabled: true
   name: oauth_username
@@ -92,7 +92,7 @@ variables:
   id: qhPdX3KKnX
 - enabled: true
   name: oauth_user_pwd
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R3VrVDFZWG53dFhpWms5ZVU0cGZsa2M4UjE5SkZxNGVFVGtuYmVpSTVOaGE2U3R2L2NoUkE0c3BXMllRYlk4N1pRS2Z5cmQvdlA1T0NPUVpwUmJIRjBoUWdFank4OTR5ST0') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RkNDZlI2ZlVneUdLbk1hUG0rd3M3QjB6WkF1V053L0RRdUVWd1Vrb3ZYNVNqRHM3UDJmOEhKOGk4SVYzWFlSTlZReHIyWkM5enhPTU1XYTY4THZMbFJjOFBIUFY1WXpUYz0') ]}
   id: 4aBBYjjvJu
 - enabled: true
   name: wallet_client_id
