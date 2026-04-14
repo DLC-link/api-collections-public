@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_E4rpgHuGWD
 createdAt: 2025-11-05T13:29:14.740116
-updatedAt: 2025-11-07T15:05:52.471937
+updatedAt: 2026-03-02T12:48:17.596728
 workspaceId: wk_86549zFCyz
 folderId: fl_CKN3pdZFRu
 authentication: {}
@@ -78,6 +78,6 @@ headers:
   id: null
 method: POST
 name: Get Accept ChoiceContexts
-sortPriority: 3000.0
-url: ${[ utility_registry_url ]}/api/token-standard/v0/registrars/${[ dec_party ]}/registry/transfer-instruction/v1/00652a9823182494315ae0d76302fda76c844b69529ac1e27d2e114a8467b1cdf8ca111220ae62833b8996161c4884f68560ee72750c7c8903a4cc00baac75385a96dcd43e/choice-contexts/accept
+sortPriority: 4000.0
+url: ${[ utility_registry_url ]}/api/token-standard/v0/registrars/${[ dec_party ]}/registry/transfer-instruction/v1/0032535e9fa97bd71bd9ef5a80d20626385d0356d7dd012667edf7ffcd287dd285ca1212200b9192e03eed1680b16cc39d4a8efedb223879aba05610e0a3d9de581ee0ad42/choice-contexts/accept
 urlParameters: []

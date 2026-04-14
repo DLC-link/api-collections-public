@@ -1,0 +1,55 @@
+type: http_request
+model: http_request
+id: rq_gj7wYmGfPq
+createdAt: 2026-03-02T12:47:25.232527
+updatedAt: 2026-03-02T13:01:09.394901
+workspaceId: wk_86549zFCyz
+folderId: fl_CKN3pdZFRu
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: w
+  clientSecret: ''
+  credentials: basic
+  grantType: password
+  password: ${[ secure(value='YENC_eUE0azNuQwEgL0js5tW7goWpgzuMnNJ8mWYxMs5agQZDEMgGK0O5PvRDRPkpaaWOAANp7Gvexw0xqdvi83cgkexFSfEC') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+      "actAs": [
+        "${[ user_party ]}"
+      ],
+      "commandId": "createTP-1",
+      "disclosedContracts": [
+      ],
+      "commands": [
+        {
+          "CreateCommand": {
+            "templateId": "#utility-registry-app-v0:Utility.Registry.App.V0.Model.TransferPreapproval:TransferPreapproval",
+            "createArguments": {
+              "operator": "${[ operator_party ]}",
+              "receiver": "${[ user_party ]}",
+              "instrumentAdmin": "${[ dec_party ]}",
+              "instrumentAllowances": [
+                {
+                  "id": "CBTC"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: rwMyVfJqGU
+method: POST
+name: Create TransferPreapproval
+sortPriority: 0.0
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+urlParameters: []

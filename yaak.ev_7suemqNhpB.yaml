@@ -1,0 +1,102 @@
+type: environment
+model: environment
+id: ev_7suemqNhpB
+workspaceId: wk_86549zFCyz
+createdAt: 2026-02-04T03:46:08.735566
+updatedAt: 2026-04-14T11:45:45.833198
+name: Testnet - UserFlow
+public: true
+base: false
+parentModel: environment
+parentId: null
+variables:
+- enabled: true
+  name: participant_url
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SGZkWnhibGc4NkJNMzJLWk8wRVNuT2R1am1JY3ZLUHNpK0ptZUxHcFZWRzl3UGJoYWRrSXNSTkxLOVo0L2c3eHFSSTFSeFVhREozMnVoVHowbFNVMDY1WG9TS1RNbjQveUtRbm5ZWGxxUnFRU2RoMnhPK3pkVTFET2QrckpHMHZrRDFiN3BDdGlieHFBPQ') ]}
+  id: J0JHVrW3Ra
+- enabled: true
+  name: oauth_url
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RngxbnVHTjJscmpHUUYyODVHNXdRS3hnV0lpZ2dnb2NBK3RHOVlrSXRTZnh3ejhpekZBSldpbHpvMmhneEZIbitCV2hDMFZtbUNvK0QyMFZINXZwVFN4YmZ6TUZZY1FmcWZhNEpUQjFyZURQTDNUdnJ5a09ERHdKemJPTXI1MzdDTU5EWHByU3FHSFpmdGNhQm1oUmdoUFhyalRsbE1xRTVQbXJES2JXMnFqVklLZU90ZDR3bTM0NUFVYmtwK211Zno') ]}
+  id: hIXwhmq3Nn
+- enabled: true
+  name: coordinator_client_id
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SFFXUVNSbnZHTm9RQkRqblY4N0FJQnNLRS8rWFBqd3FSSHkwQnFlMm85YUV2LzRYMXRxOHFJOTNUSWdzbjJnL0Q3WDhxTE9iMVNWaGVOWU5sZmQrUT0') ]}
+  id: Sh46CfFXJk
+- enabled: true
+  name: coordinator_client_secret
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RXZnRG5kS3phQk5PeHEzQVo5Ny8yZXdIanI1K2NGOTdvK0RjTmdublFBQTR3Y1hHV2dyVm9YaE5wL3BWWnFZZTM4MHY2eVNMN0JFRUtxK2ZkZDU2MTFrc2hnOVRCSDV0az0') ]}
+  id: 2ypADF2DKP
+- enabled: true
+  name: coordinator_url
+  value: https://testnet.dlc.link/attestor-1
+  id: 2tQM60TfWD
+- enabled: true
+  name: canton_network
+  value: canton-testnet
+  id: 5DQEXEZJQe
+- enabled: true
+  name: dec_party
+  value: cbtc-network::12201b1741b63e2494e4214cf0bedc3d5a224da53b3bf4d76dba468f8e97eb15508f
+  id: SbbQb3swHW
+- enabled: true
+  name: governance_rules_full_template
+  value: '#cbtc-governance:CBTC.Governance:CBTCGovernanceRules'
+  id: jeyy6CgU7x
+- enabled: true
+  name: governance_confirmation_full_template
+  value: '#cbtc-governance:CBTC.Governance:Confirmation'
+  id: z8wXSG908j
+- enabled: true
+  name: admin_signature
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RkxvcDJPSnc1RW53akxPaTlpRHZPSjBueEJraEJlYURsS2ZpYkxuV3ZiempRdTdwVFRXL3pOaHR1ZDdTQ1l0b0ZRQlpRY29kaEtxQVF2OUZWT1FLNzV6a0lYeW9MeVlUSVpraGRnN1VCZmkwUzFmV3VQSHpab2w2WG45cDJhZm1NWWRQeW90VDVXVngyNmZ6YmJyVGNEaktuT0ZPSVgvVHV1TTNMWlFCUmdCNnlvOFZhMGsyTzl5anZ5QjVWMk5wT2pJSi9yRUxhQTdIOUZnaHVvcmVFUEswVG1icklOVllNPQ') ]}
+  id: cr5Sjq2K2U
+- enabled: true
+  name: utility_registry_url
+  value: https://api.utilities.digitalasset-staging.com
+  id: AB8Vg5D2Gq
+- enabled: false
+  name: beneficiary_party
+  value: cbtc-beneficiary::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2
+  id: Yrfm63EW5u
+- enabled: true
+  name: validator_client_id
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RWpFZTdxVXNaUjhqL1BGZks1emRaV1BjWEFha2N0YXNGdTBKMVdsMWFyL3JSbk8vdFRWZWJyR3UwT09Mck5vMlNENTZIVQ') ]}
+  id: N3vzTD7jwY
+- enabled: true
+  name: validator_client_secret
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RVpzZStQVU9zbmhnNHplUmMvSC9JVXUvQVd4ZWhKcTUzbDBLdW4xVEp3U0JpT2pDR20zc1Z3eGxBZkttRmdqbHAreTBYRFRaWkhCbDJyNW81aVBnZmxnZXAvWE1qdDZFWT0') ]}
+  id: DIuwrybp64
+- enabled: true
+  name: participant_ws_url
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SFBKa2FNSnJ6MUxUSlZORVV1Q2s1Y0crazhuS1l5eVJ5T0pPQTlzY2FzOUFmRXpvRWp2QWNqbzkwSmdKbTZ3V21XZGVEcUNvRHJzUksvOGM0ZXlCeUpGOHNLeGhpa1VvSyt5NTNmWmtETVlETytuV0ljbFBNK3gra0RKTGR2Z1l5aXRIanlmRWJJ') ]}
+  id: 9MU05VzBCD
+- enabled: true
+  name: da_rules_full_template
+  value: '#cbtc:CBTC.DepositAccount:CBTCDepositAccountRules'
+  id: Wn3405mDJj
+- enabled: true
+  name: wa_rules_full_template
+  value: '#cbtc:CBTC.WithdrawAccount:CBTCWithdrawAccountRules'
+  id: zdvMvF2Vd0
+- enabled: true
+  name: wa_full_template
+  value: '#cbtc:CBTC.WithdrawAccount:CBTCWithdrawAccount'
+  id: KMNCUgZpzf
+- enabled: true
+  name: user_party
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SFVCM2ZoTllHQWN0N3l1UmRLZFFWK1RsKzY2UklhMmUwQnVKU2RqUEQwaDNHK05RSlUyMXVveGt1YUVnM2k0ZFRWNTJIcFd4S2ZyM1FlYUdPMFBXRW9wYU01REZNeFFDaVB0ZFJ0Qm5GbnBFb3B5N2UwcUMxOFZjMCtzbGVmS2xyTUwwZTg5Mm1EanVtSzJ4citGVXk5OEV2bmxYR2hJZktzTUR1OFIrUEJNODQ9') ]}
+  id: MyGICRw6eN
+- enabled: true
+  name: oauth_username
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RmZFdEdWOHg4TFIrSk9LY0RSSzc0WUhrZ1lwVUFkbkdXOU5sSnp0L2MwMmNmQjBrczR6VW9wcUMvSDBYekdnbW1tL1p3RkpVdmk2MjIxREtoRm5oYz0') ]}
+  id: qhPdX3KKnX
+- enabled: true
+  name: oauth_user_pwd
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RkNDZlI2ZlVneUdLbk1hUG0rd3M3QjB6WkF1V053L0RRdUVWd1Vrb3ZYNVNqRHM3UDJmOEhKOGk4SVYzWFlSTlZReHIyWkM5enhPTU1XYTY4THZMbFJjOFBIUFY1WXpUYz0') ]}
+  id: 4aBBYjjvJu
+- enabled: true
+  name: wallet_client_id
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RVFvNEF3NTVjOTNzRnVjdjN0bGt4b2lkZGxhbFl5MWc2YlZMVXF0bGZzSVpndDBMWStGWVF4TmU4L0VLWUd6SVZ3SnF4dG12ZHNxSXA2NE51VktRPT0') ]}
+  id: D2CFRFaJtu
+color: var(--success)
+sortPriority: 0.0
