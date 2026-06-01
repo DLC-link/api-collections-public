@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_MQWKSXStu7
 createdAt: 2025-11-05T11:38:40.098902
-updatedAt: 2026-03-09T11:29:12.898698
+updatedAt: 2026-05-12T12:58:28.418294
 workspaceId: wk_86549zFCyz
 folderId: fl_eHkDuyTdMn
 authentication: {}
@@ -14,9 +14,9 @@ body:
       "id": "jstest",
       "method": "sendtoaddress",
       "params": [
-        "bcrt1pewc0mg0jqacgaf0m9sss7h7wt72resk005hsxv33f5sr0apm8qss6lae5w",
-        1,
-        "Minting cbtc 03.09"
+        "bcrt1pzjellq54f47xd38jkzwuq9qevq63f6kma2agtzluypylfvwsgzzsn0pqsk",
+        1.1,
+        "Minting cbtc"
       ]
     }
 bodyType: application/json
