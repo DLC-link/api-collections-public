@@ -2,12 +2,12 @@ type: http_request
 model: http_request
 id: rq_gj7wYmGfPq
 createdAt: 2026-03-02T12:47:25.232527
-updatedAt: 2026-03-02T13:01:09.394901
+updatedAt: 2026-05-20T12:37:44.346042
 workspaceId: wk_86549zFCyz
 folderId: fl_CKN3pdZFRu
 authentication:
   accessTokenUrl: ${[ oauth_url ]}
-  clientId: w
+  clientId: ${[ wallet_client_id ]}
   clientSecret: ''
   credentials: basic
   grantType: password
@@ -20,7 +20,7 @@ body:
       "actAs": [
         "${[ user_party ]}"
       ],
-      "commandId": "createTP-1",
+      "commandId": "createTP-2",
       "disclosedContracts": [
       ],
       "commands": [

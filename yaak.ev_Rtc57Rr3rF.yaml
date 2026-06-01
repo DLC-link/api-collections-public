@@ -3,7 +3,7 @@ model: environment
 id: ev_Rtc57Rr3rF
 workspaceId: wk_86549zFCyz
 createdAt: 2025-11-04T11:35:38.288841
-updatedAt: 2025-11-24T10:44:06.850641
+updatedAt: 2026-05-20T14:05:03.046382
 name: Devnet - UserFlow
 public: true
 base: false
@@ -20,7 +20,7 @@ variables:
   id: ygJ576eRNp
 - enabled: true
   name: participant_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RTBWUHBwdW85WURCZEhMUHZ6Q0syc3NGdnp4Y2R1VHBEMTJwL2lGL3FvRm5vRkxFQ2pDejh4S3kyQXBDdnoyZDcrYkU1QTk4NGNYQjNVdGlKV3NVUG9wVy9JZ1NyeWFyR3ZFV1M1MVM3aWZRRWY3SkdLMGdmUmUvWXZzSzZmLzJ6S0crRTRhZkVDeGRJPQ') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R3FscDNlSm1PRDRCcEcvOEN6ZlhXeG1uajJXdG9UaXJQTWpaS2FqM3prbGdSQ0ZLSlR6TW1LQ1h2dUF3cmRvY2VYQzE2dVFsMHFwamFCVHEwUVpHMUdVL2FLcnJEZWxtdUM3WVVsS2FiTGpTY0twdmc5QlRNdUhhSlJBejZlYTRkZTZxWUtrYm4zbkVZPQ') ]}
   id: N2fph85EZe
 - enabled: true
   name: oauth_url
@@ -28,7 +28,7 @@ variables:
   id: cdqZyUaEKt
 - enabled: true
   name: coordinator_url
-  value: https://devnet.dlc.link/attestor-2
+  value: https://attestor-1.devnet.bitsafe.finance
   id: kG29SY8Jce
 - enabled: true
   name: canton_network
@@ -68,11 +68,15 @@ variables:
   id: akKSJxBn5p
 - enabled: true
   name: bitcoin_rpc_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R29xc1ptR0gzUkRDdkU5MC9sVmQ1c0pLRGNhNi9FMUM0K05KMFZVcmY0cS9XYyszTDkrQlFWMFQ1NGlLWmVuT0JDU0pXcGdjeVlxKzF0ZVpUMjcwY1hEd1JS') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RzY5RDNuVVI2aTYzc1lDTkxTcUQ5S1YvKy90ejRmYzZaNHhzUHgyeitPc3RBYXphVDUwazROZ0M0UkVxUWNCWkZJcmQwekNXaExFL3lYbW4yYXRjWUthLzlTTEtXSmNOTzk1R0s0MGZLWmJ3PT0') ]}
   id: KMyTKhtHZm
 - enabled: true
   name: receiver_party
   value: 476c4247838b9cd24e2103456461a47d::12208b1a19260c61dfd04f0d531d234f627a180232adafd612bba21c4a0d78154222
   id: fNwaSpDNPh
+- enabled: true
+  name: wallet_client_id
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RkRib0JhT0doVkVCS0JJMGhDcEw3bVovcFBqNU1KYTh0SHh4cUQyOWNxalNPTC9NMFYvMHdsWE02NTlHeml3T3Z2T1lkWFBqUEFONTgrWXF5anFIZz0') ]}
+  id: 60T9ivg2FP
 color: var(--secondary)
 sortPriority: 0.0

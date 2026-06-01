@@ -3,7 +3,7 @@ model: environment
 id: ev_7suemqNhpB
 workspaceId: wk_86549zFCyz
 createdAt: 2026-02-04T03:46:08.735566
-updatedAt: 2026-04-14T11:45:45.833198
+updatedAt: 2026-05-20T12:37:29.062487
 name: Testnet - UserFlow
 public: true
 base: false
@@ -98,5 +98,9 @@ variables:
   name: wallet_client_id
   value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RVFvNEF3NTVjOTNzRnVjdjN0bGt4b2lkZGxhbFl5MWc2YlZMVXF0bGZzSVpndDBMWStGWVF4TmU4L0VLWUd6SVZ3SnF4dG12ZHNxSXA2NE51VktRPT0') ]}
   id: D2CFRFaJtu
+- enabled: true
+  name: operator_party
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SDhKbXBBVEhNMjA3ZFdXSlFTLzVXVDNCTk9yWDEwMkdaSHlwNURqMWtaeWd0cm1lazU5SzNmeDI1VG1RZFNXbDA4Z0RTVHVMR1V3YU1GVnA2NzhEK1VkbHRCRS8xd2JUTzVHejJLQlZwTGVlZDNqQWNzbXIyRWFiL0RXU1Z2YXg2R3dRYm5aeU9lVzdlNUxsaERPMUN5WVRjTVVRenBkS1dyYnowSmtOQ1FESzU5YzBJUFdEU2w4WDQ9') ]}
+  id: jUsg8AreBR
 color: var(--success)
 sortPriority: 0.0
