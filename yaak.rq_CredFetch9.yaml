@@ -1,17 +1,16 @@
 type: http_request
 model: http_request
-id: rq_v95mCK3GLN
-createdAt: 2025-11-05T13:20:47.917034
-updatedAt: 2026-06-17T15:28:04.729870
+id: rq_CredFetch9
+createdAt: 2026-06-17T16:40:00
+updatedAt: 2026-06-17T15:14:00.840228
 workspaceId: wk_86549zFCyz
-folderId: fl_CKN3pdZFRu
+folderId: fl_DWepmt8u5p
 authentication:
   accessTokenUrl: ${[ oauth_url ]}
   clientId: ${[ wallet_client_id ]}
   clientSecret: ''
-  credentials: basic
   grantType: password
-  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RS8zNEZyb3RjMEFXY3N0OUNTaXE4bmRvTG5MNGU1Y1c5SEEwYlhZMHptSkZJdVc5UE4ybmpQYzNlcFhZNHhDVGxQQkoxRXFHNHFzeGo0VWczZw') ]}
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SGJHRUFBWGNKeTRhMUJuRzJHYmxySVdOWG5RR012U0k5TlRyRUtuNWN1Mmw5QkMvelhsTjV0TXhabTF3OEN1d0w0NSs0TG9vWFpiU0pRR01DZA') ]}
   username: ${[ oauth_username ]}
 authenticationType: oauth2
 body:
@@ -27,7 +26,7 @@ body:
                             "identifierFilter": {
                                 "TemplateFilter": {
                                     "value": {
-                                        "templateId": "#utility-registry-app-v0:Utility.Registry.App.V0.Model.Transfer:TransferOffer",
+                                        "templateId": "#utility-credential-v0:Utility.Credential.V0.Credential:Credential",
                                         "includeCreatedEventBlob": true
                                     }
                                 }
@@ -39,15 +38,15 @@ body:
         }
     }
 bodyType: application/json
-description: ''
+description: 'Fetches the user_party''s Utility.Credential.V0.Credential contracts from the ACS. Run LedgerEnd first (provides activeAtOffset). For the Withdraw request''s `credentialCids`, use the contractId of the credential whose claim is hasCBTCRole=Minter: $[<n>].contractEntry.JsActiveContract.createdEvent.contractId'
 headers:
 - enabled: true
   name: Content-Type
   value: application/json
   id: null
 method: POST
-name: Get TransferOffers
-sortPriority: 3000.0
+name: Get User Credentials
+sortPriority: 2000.0
 url: ${[ participant_url ]}/v2/state/active-contracts
 urlParameters: []
 settingSendCookies:

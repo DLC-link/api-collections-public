@@ -17,29 +17,31 @@ authenticationType: oauth2
 body:
   text: |-
     {
-      "actAs": [
-        "${[ user_party ]}"
-      ],
-      "commandId": "createTP-2",
-      "disclosedContracts": [
-      ],
-      "commands": [
-        {
-          "CreateCommand": {
-            "templateId": "#utility-registry-app-v0:Utility.Registry.App.V0.Model.TransferPreapproval:TransferPreapproval",
-            "createArguments": {
-              "operator": "${[ operator_party ]}",
-              "receiver": "${[ user_party ]}",
-              "instrumentAdmin": "${[ dec_party ]}",
-              "instrumentAllowances": [
-                {
-                  "id": "CBTC"
-                }
-              ]
+      "commands": {
+        "actAs": [
+          "${[ user_party ]}"
+        ],
+        "commandId": "createTP-2",
+        "disclosedContracts": [
+        ],
+        "commands": [
+          {
+            "CreateCommand": {
+              "templateId": "#utility-registry-app-v0:Utility.Registry.App.V0.Model.TransferPreapproval:TransferPreapproval",
+              "createArguments": {
+                "operator": "${[ operator_party ]}",
+                "receiver": "${[ user_party ]}",
+                "instrumentAdmin": "${[ dec_party ]}",
+                "instrumentAllowances": [
+                  {
+                    "id": "CBTC"
+                  }
+                ]
+              }
             }
           }
-        }
-      ]
+        ]
+      }
     }
 bodyType: application/json
 description: ''
@@ -51,5 +53,5 @@ headers:
 method: POST
 name: Create TransferPreapproval
 sortPriority: 0.0
-url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction
 urlParameters: []

@@ -2,11 +2,16 @@ type: http_request
 model: http_request
 id: rq_KS5kpnjesz
 createdAt: 2025-11-24T17:08:46.060739
-updatedAt: 2025-11-24T17:09:02.689397
+updatedAt: 2026-06-17T15:27:02.560475
 workspaceId: wk_86549zFCyz
 folderId: fl_DWepmt8u5p
-authentication: {}
-authenticationType: null
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ wallet_client_id ]}
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R21yWk5tVjJsaVdvQXZCVVNRZCtRenhtaHBRb0kwdDFQSmlVcGkzbkNrYmc2UEFFU1RuZW1QbmllQVdQWlp3NHZRS1ZUeUc1VlVBUVQ1d2lJZw') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
 body:
   text: |-
     {
@@ -43,3 +48,18 @@ name: Get Withdraw Requests
 sortPriority: 4000.0
 url: ${[ participant_url ]}/v2/state/active-contracts
 urlParameters: []
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0

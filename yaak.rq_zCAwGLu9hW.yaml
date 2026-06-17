@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_zCAwGLu9hW
 createdAt: 2025-11-24T10:42:47.723214
-updatedAt: 2026-06-17T14:33:41.113742
+updatedAt: 2026-06-17T15:15:12.827853
 workspaceId: wk_86549zFCyz
 folderId: fl_DWepmt8u5p
 authentication:
@@ -15,73 +15,78 @@ authenticationType: oauth2
 body:
   text: |-
     {
-      "commands": [
-        {
-          "ExerciseCommand": {
-            "templateId": "${[ wa_full_template ]}",
-            "contractId": "004f55d4eb7f8a0ec53895b46d0c770c53a5c3d648e122ca0d946f882022e0b473ca121220fa44cb9690cec63bf0289bab9af64aaee99330dabad41fe15747c62c79464d85",
-            "choice": "CBTCWithdrawAccount_Withdraw",
-            "choiceArgument": {
-              "amount": "0.1",
-              "tokens": [
-                "0021154416be7d827c2d6287bf6c4d7e40d6218428826724afa513934664dc9d1cca121220d64209a0cdbdd182631d3a74aece9289154bc62c4a33d7cab9de8240987b88dc"
-              ],
-              "burnMintFactoryCid": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='always') ]}",
-              "extraArgs": {
-                "context": {
-                  "values": {
-                    "utility.digitalasset.com/instrument-configuration": {
-                      "tag": "AV_ContractId",
-                      "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='always') ]}"
-                    },
-                    "utility.digitalasset.com/issuer-credentials": {
-                      "tag": "AV_List",
-                      "value": [
-                        {
-                          "tag": "AV_ContractId",
-                          "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pc3N1ZXJfY3JlZGVudGlhbC5jb250cmFjdF9pZA', behavior='always') ]}"
-                        }
-                      ]
+      "commands": {
+        "commands": [
+          {
+            "ExerciseCommand": {
+              "templateId": "${[ wa_full_template ]}",
+              "contractId": "004f55d4eb7f8a0ec53895b46d0c770c53a5c3d648e122ca0d946f882022e0b473ca121220fa44cb9690cec63bf0289bab9af64aaee99330dabad41fe15747c62c79464d85",
+              "choice": "CBTCWithdrawAccount_Withdraw",
+              "choiceArgument": {
+                "amount": "0.0001",
+                "tokens": [
+                  "0021154416be7d827c2d6287bf6c4d7e40d6218428826724afa513934664dc9d1cca121220d64209a0cdbdd182631d3a74aece9289154bc62c4a33d7cab9de8240987b88dc"
+                ],
+                "burnMintFactoryCid": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='always') ]}",
+                "extraArgs": {
+                  "context": {
+                    "values": {
+                      "utility.digitalasset.com/instrument-configuration": {
+                        "tag": "AV_ContractId",
+                        "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='always') ]}"
+                      },
+                      "utility.digitalasset.com/issuer-credentials": {
+                        "tag": "AV_List",
+                        "value": [
+                          {
+                            "tag": "AV_ContractId",
+                            "value": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pc3N1ZXJfY3JlZGVudGlhbC5jb250cmFjdF9pZA', behavior='always') ]}"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "meta": {
+                    "values": {
+                      "splice.lfdecentralizedtrust.org/reason": "CBTC Burn"
                     }
                   }
                 },
-                "meta": {
-                  "values": {
-                    "splice.lfdecentralizedtrust.org/reason": "CBTC Burn"
-                  }
-                }
+                "credentialCids": [
+                  "${[ response.body.path(request='rq_CredFetch9', path=b64'JFswXS5jb250cmFjdEVudHJ5LkpzQWN0aXZlQ29udHJhY3QuY3JlYXRlZEV2ZW50LmNvbnRyYWN0SWQ', behavior='always') ]}"
+                ]
               }
             }
           }
-        }
-      ],
-      "actAs": [
-        "${[ user_party ]}"
-      ],
-      "commandId": "cmd12321",
-      "disclosedContracts": [
-        {
-          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS50ZW1wbGF0ZV9pZA', behavior='always') ]}",
-          "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='always') ]}",
-          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='always') ]}",
-          "synchronizerId": ""
-        },
-        {
-          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24udGVtcGxhdGVfaWQ', behavior='always') ]}",
-          "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='always') ]}",
-          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY3JlYXRlZF9ldmVudF9ibG9i', behavior='always') ]}",
-          "synchronizerId": ""
-        },
-        {
-          "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pc3N1ZXJfY3JlZGVudGlhbC50ZW1wbGF0ZV9pZA', behavior='always') ]}",
-          "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pc3N1ZXJfY3JlZGVudGlhbC5jb250cmFjdF9pZA', behavior='always') ]}",
-          "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pc3N1ZXJfY3JlZGVudGlhbC5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='always') ]}",
-          "synchronizerId": ""
-        }
-      ]
+        ],
+        "actAs": [
+          "${[ user_party ]}"
+        ],
+        "commandId": "cmd12321",
+        "disclosedContracts": [
+          {
+            "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS50ZW1wbGF0ZV9pZA', behavior='always') ]}",
+            "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jb250cmFjdF9pZA', behavior='always') ]}",
+            "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5idXJuX21pbnRfZmFjdG9yeS5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='always') ]}",
+            "synchronizerId": ""
+          },
+          {
+            "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24udGVtcGxhdGVfaWQ', behavior='always') ]}",
+            "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY29udHJhY3RfaWQ', behavior='always') ]}",
+            "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pbnN0cnVtZW50X2NvbmZpZ3VyYXRpb24uY3JlYXRlZF9ldmVudF9ibG9i', behavior='always') ]}",
+            "synchronizerId": ""
+          },
+          {
+            "templateId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pc3N1ZXJfY3JlZGVudGlhbC50ZW1wbGF0ZV9pZA', behavior='always') ]}",
+            "contractId": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pc3N1ZXJfY3JlZGVudGlhbC5jb250cmFjdF9pZA', behavior='always') ]}",
+            "createdEventBlob": "${[ response.body.path(request='rq_eW3P9YGa8t', path=b64'JC5pc3N1ZXJfY3JlZGVudGlhbC5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='always') ]}",
+            "synchronizerId": ""
+          }
+        ]
+      }
     }
 bodyType: application/json
-description: ''
+description: Requires credentialCids (Optional [ContractId Credential]) proving the owner has hasCBTCRole=Minter, else fails with Credential CIDs required. Auto-filled from Get User Credentials index [0]. Run LedgerEnd then Get User Credentials first; if more than one credential is returned, change the [0] index or paste the Minter credential contractId by hand.
 headers:
 - enabled: true
   name: Content-Type
@@ -90,7 +95,7 @@ headers:
 method: POST
 name: Withdraw
 sortPriority: 3000.0
-url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction
 urlParameters: []
 settingSendCookies:
   enabled: false
