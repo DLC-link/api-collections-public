@@ -2,11 +2,16 @@ type: http_request
 model: http_request
 id: rq_o695Htw3zs
 createdAt: 2025-11-24T10:26:29.826007
-updatedAt: 2025-11-24T17:08:52.378164
+updatedAt: 2026-06-17T14:32:19.415367
 workspaceId: wk_86549zFCyz
 folderId: fl_DWepmt8u5p
-authentication: {}
-authenticationType: null
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ wallet_client_id ]}
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RXJPLzhnN1JMV2VtSmEvVHJwWHQ2KzY4UWZsVll6YUs0d1h2Um8vQ3p4SThzSDMwOER1VFdIOUsrQ1UwWkkzc1RHL05DT3ZEa1N2QUZzc2pRNQ') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
 body:
   text: |-
     {
@@ -43,3 +48,18 @@ name: Get Withdraw Accounts
 sortPriority: 0.0
 url: ${[ participant_url ]}/v2/state/active-contracts
 urlParameters: []
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0

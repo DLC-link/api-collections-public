@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_9jEkh8d56R
 createdAt: 2025-11-05T11:33:59.504293
-updatedAt: 2026-05-20T12:22:16.649974
+updatedAt: 2026-06-17T13:18:52.256791
 workspaceId: wk_86549zFCyz
 folderId: fl_eHkDuyTdMn
 authentication: {}
@@ -21,3 +21,18 @@ name: Get Bitcoin Deposit Address
 sortPriority: 2000.0
 url: ${[ coordinator_url ]}/app/get-bitcoin-address
 urlParameters: []
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0

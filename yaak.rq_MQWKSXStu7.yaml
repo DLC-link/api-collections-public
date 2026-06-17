@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_MQWKSXStu7
 createdAt: 2025-11-05T11:38:40.098902
-updatedAt: 2026-05-12T12:58:28.418294
+updatedAt: 2026-06-09T11:45:56.410929
 workspaceId: wk_86549zFCyz
 folderId: fl_eHkDuyTdMn
 authentication: {}
@@ -15,8 +15,8 @@ body:
       "method": "sendtoaddress",
       "params": [
         "bcrt1pzjellq54f47xd38jkzwuq9qevq63f6kma2agtzluypylfvwsgzzsn0pqsk",
-        1.1,
-        "Minting cbtc"
+        0.3,
+        "Minting cbtc gengov"
       ]
     }
 bodyType: application/json
@@ -39,3 +39,18 @@ name: Send Bitcoin
 sortPriority: 3000.0
 url: ${[ bitcoin_rpc_url ]}
 urlParameters: []
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0
