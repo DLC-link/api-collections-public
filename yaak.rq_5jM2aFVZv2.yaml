@@ -18,33 +18,38 @@ authenticationType: oauth2
 body:
   text: |-
     {
-        "commands": [
-            {
-                "ExerciseCommand": {
-                    "templateId": "${[ da_rules_full_template ]}",
-                    "contractId": "${[ response.body.path(request='rq_9gmJeWowVf', path=b64'JC5kYV9ydWxlcy5jb250cmFjdF9pZA', behavior='smart') ]}",
-                    "choice": "CBTCDepositAccountRules_CreateDepositAccount",
-                    "choiceArgument": {
-                        "owner" : "${[ user_party ]}"
-                    }
-                }
-            }
-        ],
-        "actAs": [
-            "${[ user_party ]}"
-        ],
-        "commandId": "cmd1231",
-        "disclosedContracts": [
-            {
-                "templateId": "${[ response.body.path(request='rq_9gmJeWowVf', path=b64'JC5kYV9ydWxlcy50ZW1wbGF0ZV9pZA', behavior='smart') ]}",
-                "contractId": "${[ response.body.path(request='rq_9gmJeWowVf', path=b64'JC5kYV9ydWxlcy5jb250cmFjdF9pZA', behavior='smart') ]}",
-                "createdEventBlob": "${[ response.body.path(request='rq_9gmJeWowVf', path=b64'JC5kYV9ydWxlcy5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='smart') ]}",
-                "synchronizerId": ""
-            }
-        ]
+      "commands": {
+          "commands": [
+              {
+                  "ExerciseCommand": {
+                      "templateId": "${[ da_rules_full_template ]}",
+                      "contractId": "${[ response.body.path(request='rq_9gmJeWowVf', path=b64'JC5kYV9ydWxlcy5jb250cmFjdF9pZA', behavior='smart') ]}",
+                      "choice": "CBTCDepositAccountRules_CreateDepositAccount",
+                      "choiceArgument": {
+                          "owner" : "${[ user_party ]}",
+                          "credentialCids": [
+                              "${[ response.body.path(request='rq_CredFetch9', path=b64'JFswXS5jb250cmFjdEVudHJ5LkpzQWN0aXZlQ29udHJhY3QuY3JlYXRlZEV2ZW50LmNvbnRyYWN0SWQ', behavior='always') ]}"
+                          ]
+                      }
+                  }
+              }
+          ],
+          "actAs": [
+              "${[ user_party ]}"
+          ],
+          "commandId": "cmd1231",
+          "disclosedContracts": [
+              {
+                  "templateId": "${[ response.body.path(request='rq_9gmJeWowVf', path=b64'JC5kYV9ydWxlcy50ZW1wbGF0ZV9pZA', behavior='smart') ]}",
+                  "contractId": "${[ response.body.path(request='rq_9gmJeWowVf', path=b64'JC5kYV9ydWxlcy5jb250cmFjdF9pZA', behavior='smart') ]}",
+                  "createdEventBlob": "${[ response.body.path(request='rq_9gmJeWowVf', path=b64'JC5kYV9ydWxlcy5jcmVhdGVkX2V2ZW50X2Jsb2I', behavior='smart') ]}",
+                  "synchronizerId": ""
+              }
+          ]
+      }
     }
 bodyType: application/json
-description: ''
+description: "Requires credentialCids proving the owner has hasCBTCRole=Minter, else fails with Credential CIDs required. Auto-filled from Get User Credentials index [0]. Run LedgerEnd then Get User Credentials first."
 headers:
 - enabled: true
   name: Content-Type
@@ -53,5 +58,5 @@ headers:
 method: POST
 name: Create Deposit Account
 sortPriority: 0.0
-url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction-tree
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction
 urlParameters: []
