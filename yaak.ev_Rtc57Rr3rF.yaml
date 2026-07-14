@@ -3,7 +3,7 @@ model: environment
 id: ev_Rtc57Rr3rF
 workspaceId: wk_86549zFCyz
 createdAt: 2025-11-04T11:35:38.288841
-updatedAt: 2026-05-20T14:05:03.046382
+updatedAt: 2026-07-14T14:02:07.041247
 name: Devnet - UserFlow
 public: true
 base: false
@@ -20,15 +20,15 @@ variables:
   id: ygJ576eRNp
 - enabled: true
   name: participant_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R3FscDNlSm1PRDRCcEcvOEN6ZlhXeG1uajJXdG9UaXJQTWpaS2FqM3prbGdSQ0ZLSlR6TW1LQ1h2dUF3cmRvY2VYQzE2dVFsMHFwamFCVHEwUVpHMUdVL2FLcnJEZWxtdUM3WVVsS2FiTGpTY0twdmc5QlRNdUhhSlJBejZlYTRkZTZxWUtrYm4zbkVZPQ') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SGdyS001YnhkUm5MSk02RGlJVmNIenZZbkFUNVlnMEYrRlhUbjI4dm91K1ZpYWhZQWhjU0FjdzErVXAwK3JOa0JheWpmOXFRZEhwcWZQcjloZmF1M1R1MHgwWis2ZHlGQjk2SFJsT2tuQWxhSVh2S3RGZkRDRndGSldxV1Ayd3lLRjJ3PT0') ]}
   id: N2fph85EZe
 - enabled: true
   name: oauth_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R0NGMzFaWGlBRWl0MVNRSlZuOE4vYmZvNGpoMTUxRGtERkdSN09Bb0txQnU2dHp4MzA0clJhcyszak1vVytYaWNzR1F6TjgyZm5TYlhDOVhtUXkwTnhnOUZkZ21nS2lZeGRZQ0hzSVl0VnpzaVE2bmFqaHVWS21pdmMyL3JyM1A0ZFhaa2dSTjFJUGl5eDhkYXJ3cHhBeXpVVmlJV2RRb3dGbm5ic2pHeDJSZ0FwV3hKYVhmQlZYdTV0QVlOVG1RPT0') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RUtMWTJPMEdZSXNjM0tYUmhITEdzSDlQUVhNWkI2bnd1RHdhOFFQWTdmU3VKb3lSc2NRRVNmemdBbjFmQXFvbjFxQlRNVDFReHF3NDU3YW9sS2FiVit6K3Y0bDEzQzVFOG1ScFdmZUlsL3FCcGRieHJsWGlvZUtUUlBoWWVYZVRKanYrUVFYcFBkZkNsVlFKdGg0MWx1Y3VEUEl6dDF6OUw5dkxHaUhUcXNrdG5Bd204aUpvc1l6aVJk') ]}
   id: cdqZyUaEKt
 - enabled: true
   name: coordinator_url
-  value: https://attestor-1.devnet.bitsafe.finance
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SHJqOUordFZFNW1USmxWQmVaWlNmeVk0SnFxcWZXeHl5SlJBeU0zblpib1RwMHB4RmxpUzVyd0RGaVI0V29oTjhNUjZnYXJRR0crVnladUlrZ1BRbjV5d2RXVFdlS1RUUkV2MHNVZzJBRGI4cz0') ]}
   id: kG29SY8Jce
 - enabled: true
   name: canton_network
@@ -48,7 +48,7 @@ variables:
   id: t3NfpN4pNk
 - enabled: true
   name: oauth_user_pwd
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RkEzQ0I3R09mMWpBTWZyYWUyVkN4Y0xoQkZ4bCs0c1VjVGFsMHVTc1JOOXJ5enZtbVBROGcrRGI1MXpveU9jUUs3ZGNQMDMvb2NIaHNLOFE9PQ') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RWdJODU5RGFmWVhrcUQ4MjJiMllSVERxaXVxZmxWLzdPbi9YeG8yTUJoems3Q3hOQzY5ck44T29UWUJ2dGNiclJZdkIvV0dXaitySDBrQXhnPQ') ]}
   id: ccwsXPtC4w
 - enabled: true
   name: user_party

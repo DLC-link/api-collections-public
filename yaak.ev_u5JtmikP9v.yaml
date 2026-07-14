@@ -3,7 +3,7 @@ model: environment
 id: ev_u5JtmikP9v
 workspaceId: wk_86549zFCyz
 createdAt: 2025-11-13T14:31:12.762250
-updatedAt: 2026-03-02T13:28:15.317658
+updatedAt: 2026-07-14T14:02:17.407815
 name: Mainnet - UserFlow
 public: true
 base: false
@@ -28,7 +28,7 @@ variables:
   id: 52BK2VqeYa
 - enabled: true
   name: coordinator_url
-  value: https://mainnet.dlc.link/attestor-1
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R0JkdTNGQjlKdjJndHBud1poMm05cUF6dlVTVmlkU0RiQjdFR2F2VUpLRWN2V3V2U2p3V0hFaVphUnEwUHF1OHRiY2hJV1lGcktnbm5pNEtSUHZlQXJFVUtrNlJUN0M0QXlXMTg9') ]}
   id: BdTqUxpfCB
 - enabled: true
   name: canton_network
