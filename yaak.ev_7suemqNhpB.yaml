@@ -3,7 +3,7 @@ model: environment
 id: ev_7suemqNhpB
 workspaceId: wk_86549zFCyz
 createdAt: 2026-02-04T03:46:08.735566
-updatedAt: 2026-06-17T13:19:16.183220
+updatedAt: 2026-07-14T14:02:11.321147
 name: Testnet - UserFlow
 public: true
 base: false
@@ -12,11 +12,11 @@ parentId: null
 variables:
 - enabled: true
   name: participant_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SGZkWnhibGc4NkJNMzJLWk8wRVNuT2R1am1JY3ZLUHNpK0ptZUxHcFZWRzl3UGJoYWRrSXNSTkxLOVo0L2c3eHFSSTFSeFVhREozMnVoVHowbFNVMDY1WG9TS1RNbjQveUtRbm5ZWGxxUnFRU2RoMnhPK3pkVTFET2QrckpHMHZrRDFiN3BDdGlieHFBPQ') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RjNGZTdPQzBad3FRS2hrdVVwSlkzMGVEK3RiMkpDbCtoY1FCTmE5RHczTVY2T2tJd0pocURLK0hZeWpoNkFtQlc1TVl1dE5Jams0eXdHVlJ1RXFYMU1SRmgrWlVMVVRaL09zTTgxYUtUTHNMM1JxYVBXVDNqMmxIZml5ZVRyR2ZKM2FWUT0') ]}
   id: J0JHVrW3Ra
 - enabled: true
   name: oauth_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RngxbnVHTjJscmpHUUYyODVHNXdRS3hnV0lpZ2dnb2NBK3RHOVlrSXRTZnh3ejhpekZBSldpbHpvMmhneEZIbitCV2hDMFZtbUNvK0QyMFZINXZwVFN4YmZ6TUZZY1FmcWZhNEpUQjFyZURQTDNUdnJ5a09ERHdKemJPTXI1MzdDTU5EWHByU3FHSFpmdGNhQm1oUmdoUFhyalRsbE1xRTVQbXJES2JXMnFqVklLZU90ZDR3bTM0NUFVYmtwK211Zno') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RUkxRXFCd2wxUWloSU8rTXlOemxWV2hQaFQzRjVleGNUaHBjS3huQ1NMQ3RZaE8vS2ROREFYV2JZVkNsc3VBL0RkcmU0ZFY5amlIeUpoSG5tRzlpRjF4cXhuTGtGM2hTUFp3V05QWWtZTFNjOFRhN0VQY2VJcHJNZHo4djZMWUZhVHl4aVVVSW1NeTd3ZGp3cDJKQUlKeXlMR3p2TmJLdFgyT2JOcXlIM3V0WmZOQkRyakJuMmR3RmtQNHNVPQ') ]}
   id: hIXwhmq3Nn
 - enabled: true
   name: coordinator_client_id
@@ -28,7 +28,7 @@ variables:
   id: 2ypADF2DKP
 - enabled: true
   name: coordinator_url
-  value: https://attestor-1.testnet.bitsafe.finance
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RUR3NXpkdW16WVg5R3BDaysrUzVQS3BHRTBZT0NXa005bzFsZ2NKUXQxUzRaL0lnU052QzdNRXd1dXBCZEo2WllnS1BidGhFcnh5cFJaQUlJMDJaQWhObHgzbjJlaEIwajc1R0piZUsvV0Y5WWg') ]}
   id: 2tQM60TfWD
 - enabled: true
   name: canton_network
