@@ -1,0 +1,28 @@
+type: folder
+model: folder
+id: fl_SRRHJ5YvUD
+createdAt: 2026-07-15T18:41:31.128633
+updatedAt: 2026-07-15T18:41:33.911371
+workspaceId: wk_86549zFCyz
+folderId: null
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: MintingDelegation
+sortPriority: 8000.0
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0

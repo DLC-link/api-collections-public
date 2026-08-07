@@ -1,0 +1,66 @@
+type: http_request
+model: http_request
+id: rq_rEuaoAjMZJ
+createdAt: 2026-07-15T18:41:20.915905
+updatedAt: 2026-07-20T15:43:08.817872
+workspaceId: wk_86549zFCyz
+folderId: fl_SRRHJ5YvUD
+authentication:
+  accessTokenUrl: ${[ oauth_url ]}
+  clientId: ${[ validator_client_id ]}
+  clientSecret: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RWRCZEV3MXA4Qzc1QTc5aDAybkZMNm5YenJSNVlLdlZCWklMenlSdlgrMDNONmtROUpxMzhsQVlIb1phSmdBejVma0Y5MUZjZy9hc2FSRndYOEF0UDZQSDV2UlRBVg') ]}
+  credentials: body
+  disabled: false
+  grantType: password
+  password: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R0dFdEMxZko5S2pVams4bVZtRmRhUVNQcEk3b3ZieXE4M3E0NzRjNkFJLzdmdGc3M3FvMkdkd1UyTDZ2TGRrTno0a0pmTFU3WFBZcDVlbXlLWA') ]}
+  username: ${[ oauth_username ]}
+authenticationType: oauth2
+body:
+  text: |-
+    {
+      "commands": {
+        "commands": [
+          {
+            "ExerciseCommand": {
+              "templateId": "94d88246f69d8a4b69333d1f993e3280deaca19b70511ea7687f01e4328a34a4:Splice.Wallet.MintingDelegation:MintingDelegationProposal",
+              "contractId": "0009adaf4f5dd1f0eae1dac14a1d445bc7c0c04888ade7a86f8605c2a7aa10e464ca121220e75f2d6fed88e8a0d0f9ca1c9f47b401759209ba71d5d9e43bb23c0e5700a81c",
+              "choice": "MintingDelegationProposal_Accept",
+              "choiceArgument": {
+                "existingDelegationCid": null
+              }
+            }
+          }
+        ],
+        "actAs": [
+          "${[ user_party ]}"
+        ],
+        "commandId": "accept-minting-delegation-cbtc-1"
+      }
+    }
+bodyType: application/json
+description: Requires credentialCids proving the owner has hasCBTCRole=Minter, else fails with Credential CIDs required. Auto-filled from Get User Credentials index [0]. Run LedgerEnd then Get User Credentials first.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: JYwbu3VBEQ
+method: POST
+name: Accept MintingDelegationProposal
+sortPriority: 0.0
+url: ${[ participant_url ]}/v2/commands/submit-and-wait-for-transaction
+urlParameters: []
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0
