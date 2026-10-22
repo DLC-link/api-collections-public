@@ -46,7 +46,7 @@ Queries all active contracts for the authenticated party with full details inclu
 ### Mint Flow
 
 **Create Deposit Account**
-`POST /v2/commands/submit-and-wait-for-transaction-tree`
+`POST /v2/commands/submit-and-wait-for-transaction`
 Creates a new CBTC deposit account by exercising the `CBTCDepositAccountRules_CreateDepositAccount` choice. This requires disclosed Rules contracts from the Attestors. See above.
 
 **Get Deposit Accounts**
@@ -58,8 +58,8 @@ Retrieves all CBTCDepositAccount contracts for the authenticated user.
 Obtains the Bitcoin deposit address associated with a specific deposit account ID. The user sends Bitcoin to this address to mint CBTC.
 
 **Send Bitcoin** (example only for demo purposes)
-`POST {bitcoin_rpc_url}`
-Sends Bitcoin to a specified address using Bitcoin RPC `sendtoaddress` method.
+`POST {bitcoin_rpc_url}/wallet/miner`
+Sends Bitcoin to a specified address using Bitcoin RPC `sendtoaddress` method. On Devnet, the funded regtest wallet is `miner`.
 
 **Get All Holdings**
 `POST /v2/state/active-contracts`
@@ -68,7 +68,7 @@ Queries all token holdings by filtering for contracts implementing the `Splice.A
 ### Transfer Flow
 
 **Transfer**
-`POST /v2/commands/submit-and-wait-for-transaction-tree`
+`POST /v2/commands/submit-and-wait-for-transaction`
 Initiates a CBTC transfer by exercising the `TransferFactory_Transfer` choice, creating a transfer instruction from sender to receiver.
 
 **Get TransferOffers**
@@ -80,5 +80,5 @@ Retrieves all pending TransferOffer contracts for the authenticated party.
 Fetches the necessary choice contexts and disclosed contracts required to accept a specific transfer instruction.
 
 **Accept TransferOffer**
-`POST /v2/commands/submit-and-wait-for-transaction-tree`
+`POST /v2/commands/submit-and-wait-for-transaction`
 Accepts a pending transfer offer by exercising the `TransferInstruction_Accept` choice with the appropriate context and disclosed contracts.
