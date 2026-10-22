@@ -3,7 +3,7 @@ model: environment
 id: ev_7suemqNhpB
 workspaceId: wk_86549zFCyz
 createdAt: 2026-02-04T03:46:08.735566
-updatedAt: 2026-07-14T14:02:11.321147
+updatedAt: 2026-10-22T09:39:34.549805
 name: Testnet - UserFlow
 public: true
 base: false
@@ -12,11 +12,11 @@ parentId: null
 variables:
 - enabled: true
   name: participant_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RjNGZTdPQzBad3FRS2hrdVVwSlkzMGVEK3RiMkpDbCtoY1FCTmE5RHczTVY2T2tJd0pocURLK0hZeWpoNkFtQlc1TVl1dE5Jams0eXdHVlJ1RXFYMU1SRmgrWlVMVVRaL09zTTgxYUtUTHNMM1JxYVBXVDNqMmxIZml5ZVRyR2ZKM2FWUT0') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SEQ1bitwMGJDd0pvT1lGNEQzcWdoQWY1SUR0eHhjU3VxOUlJcmVsLzQrTC9pejB5bW5TQXM2WExSaDFZcGk3NUt6Z0JHV3huRXhOaVM4R2IxRU5GUEIrUjB0UG5tTEJHR0NIRGNLcFRucnBXQVI0Z0ZwY2twNk0yVm14Y3JMWmM4dmhZQjJDZDRhT2lNcQ') ]}
   id: J0JHVrW3Ra
 - enabled: true
   name: oauth_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RUkxRXFCd2wxUWloSU8rTXlOemxWV2hQaFQzRjVleGNUaHBjS3huQ1NMQ3RZaE8vS2ROREFYV2JZVkNsc3VBL0RkcmU0ZFY5amlIeUpoSG5tRzlpRjF4cXhuTGtGM2hTUFp3V05QWWtZTFNjOFRhN0VQY2VJcHJNZHo4djZMWUZhVHl4aVVVSW1NeTd3ZGp3cDJKQUlKeXlMR3p2TmJLdFgyT2JOcXlIM3V0WmZOQkRyakJuMmR3RmtQNHNVPQ') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SGFIVmRqTzhOaEZnb3pQMDk5MmdjMlo2RlVrSzk5WEpGdGNCQVhJdy8vVHYxbHpKa09qb3lTRENjVk0yWWZWdWJpeGMwTUc0TGU5VDFJTG5Yc3dNSG9aWjQ4VDdabnF0OE1PRGxxTVFOSGtkRGFtUzRQa0dNM1lPS2ZTTStvZWRIMzdkbm9xSjI4VUNOWXpaMmFJR1lxWk1LdWxNb0dlYzFRd01pcG1kZkRLcHhMaWM1SUQ3Y0lGTDhBUlhrYXlZa0lRaWg5') ]}
   id: hIXwhmq3Nn
 - enabled: true
   name: coordinator_client_id
@@ -28,7 +28,7 @@ variables:
   id: 2ypADF2DKP
 - enabled: true
   name: coordinator_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RUR3NXpkdW16WVg5R3BDaysrUzVQS3BHRTBZT0NXa005bzFsZ2NKUXQxUzRaL0lnU052QzdNRXd1dXBCZEo2WllnS1BidGhFcnh5cFJaQUlJMDJaQWhObHgzbjJlaEIwajc1R0piZUsvV0Y5WWg') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RUlCdWcxWkxOOVB3ZGlaUGNiQnNaOXJ6RGdacFZkeHBKSStjM1NHTjhmNzFQancrNnNqT09DcENFcXJXUnI4Y2NqNDlUOW9WUmxVYnhoci9OMHFNWnN0djFnM0xjU0tFbVMzNzJtV2dmM3RYT08') ]}
   id: 2tQM60TfWD
 - enabled: true
   name: canton_network

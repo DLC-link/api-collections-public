@@ -3,7 +3,7 @@ model: environment
 id: ev_u5JtmikP9v
 workspaceId: wk_86549zFCyz
 createdAt: 2025-11-13T14:31:12.762250
-updatedAt: 2026-07-14T14:02:17.407815
+updatedAt: 2026-10-22T09:40:37.659373
 name: Mainnet - UserFlow
 public: true
 base: false
@@ -12,11 +12,11 @@ parentId: null
 variables:
 - enabled: true
   name: participant_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RjM4d29DdmtoV1B5TGN0bTArdnhxT1dqaVpMVTF3eXMvMk8rOGtsYytDMm5kenExOXAxS1lEaHgvMUJURGVtN2ZGMzI0a0U4eXdMMkp5a3ZzeUVhajFiSmhRWk1MNGRFOEM5aXFRSFZnR0MzaDJnT2Z0VDZkRVB6aisrNWhOYitTOTk4cHo') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RXc2RlB3aGZzQW1xQy82UnBjaGNjMksyS2RFK3g2eWwvL01XY0srbWQwUENlK2d5VGRrSElsdDJCT2lFVW9mWkRhOFVPSFFxR1dBclJaVDlhQVdXWWJsaTNxRUNFVGJYNFpxVENPaFJGNFQ1UzIzQ3hQb3NPcytJZll4RkVWdVczYUthM1A') ]}
   id: e5323aI4Zm
 - enabled: true
   name: oauth_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RXYzRGFhMlhudmk1RmsxSWJWclp6bklUS3JCcGZGS3RsVVI4dUhjKzZzaXJJa3VyZEFpNFZYbyszRjZzTTIzdzRxb0E3N29meWlVN0dlZ3pkcHplQUdrQ2FCT3B6RlZBemVQRjduakg2RWhjVkw5ZUdyNExiRmpkSGxDY2ZnYXQzMFNLS2xEekNEeTJDZnhYdVFxU0dWSWI3L0MrN2paSXQ1KzdsUjI3OUZvQ0FBN296SjJHUXl2VmwyL0E9PQ') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3SFdiajdaZzVNYjBCejRUellUeE1RV3d3clllckYyVHZwQytGM0dXQ2NWTlRBSyt2c1JTaWFCbEZWZlZUcE9PaUZua1Rpc3BKQlF1bGVGZGltNGdRcXRjc01BVGFmVHgvenU2eDBFK2NERDlMRUFPd2d0eityNi9RMCt1Sjc3dk43bXAzYVZ4QkI3ZXBWaGUrTmpJUC9pa0poYW9QeFRURmlFOG91dTdEclBRa0tVYllMUWNWNzBxYTlCL2c9PQ') ]}
   id: T6QAkBgSaT
 - enabled: true
   name: coordinator_client_id
@@ -28,7 +28,7 @@ variables:
   id: 52BK2VqeYa
 - enabled: true
   name: coordinator_url
-  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3R0JkdTNGQjlKdjJndHBud1poMm05cUF6dlVTVmlkU0RiQjdFR2F2VUpLRWN2V3V2U2p3V0hFaVphUnEwUHF1OHRiY2hJV1lGcktnbm5pNEtSUHZlQXJFVUtrNlJUN0M0QXlXMTg9') ]}
+  value: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RlF4UW0yTHAyVktLMm1NN1BRMjNQZS9LZGd0ZE5ibDBuUGJiajNpSGVyNEFkM3RJV043MmhuM1BrSDhaZkhJR1YwS0c0YmlhU0ZYajNuei83OGRpdnk1R2w2STRXMjlrV1BUYXM9') ]}
   id: BdTqUxpfCB
 - enabled: true
   name: canton_network

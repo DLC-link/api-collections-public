@@ -15,9 +15,8 @@ authenticationType: oauth2
 body:
   text: |-
     {
-      "verbose": true,
       "activeAtOffset": ${[ response.body.path(request='rq_NZfpjizL6F', path=b64'JC5vZmZzZXQ', behavior='always') ]},
-      "filter": {
+      "eventFormat": {
         "filtersByParty": {
           "${[ user_party ]}": {
             "cumulative": [
@@ -34,7 +33,8 @@ body:
               }
             ]
           }
-        }
+        },
+        "verbose": true
       }
     }
 bodyType: application/json
