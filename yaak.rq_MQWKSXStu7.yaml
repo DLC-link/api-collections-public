@@ -37,7 +37,7 @@ headers:
 method: POST
 name: Send Bitcoin
 sortPriority: 3000.0
-url: ${[ bitcoin_rpc_url ]}
+url: ${[ bitcoin_rpc_url ]}/wallet/miner
 urlParameters: []
 settingSendCookies:
   enabled: false
